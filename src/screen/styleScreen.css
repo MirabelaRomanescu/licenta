@@ -1,0 +1,79 @@
+.loginComponent,
+.registerComponent {
+  width: 100%;
+}
+
+.loginComponent .container,
+.registerComponent .container {
+  width: 350px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.errorScreen {
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #da3b26d4;
+  box-shadow: 0px 0px 13px -3px #333;
+}
+
+.errorScreen .errorComponent {
+  width: 320px;
+  height: 290px;
+  background-color: grey;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.errorScreen .errorComponent h3 {
+  margin: unset;
+  padding: 18px;
+  color: white;
+  background-color: #000000d6;
+}
+
+.errorScreen .errorComponent .errorMessage {
+  height: 160px;
+  width: 100%;
+  padding: 10px;
+}
+
+.errorScreen .errorComponent .errorMessage p {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 62px;
+}
+
+.errorScreen .errorComponent .errorAction {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.errorScreen .errorComponent .errorAction button{
+  border: none;
+  padding:5px 10px ;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: sans-serif;
+  background: none;
+  color: white;
+  border-radius:3px;
+  transition: background 1s;
+}
+.errorScreen .errorComponent .errorAction button:hover{
+  cursor: pointer;
+  color:rgba(245, 245, 245, 0.726);
+  background: #555;
+}

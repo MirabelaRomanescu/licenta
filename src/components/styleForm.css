@@ -1,0 +1,22 @@
+form {
+  width: 300px;
+  box-sizing: content-box;
+}
+
+.fields {
+  padding: 4px;
+  width: 100%;
+}
+
+.fields input {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid;
+  padding: 10px 0px 10px 10px;
+}
+
+.fieldButton {
+  margin-top: 10px;
+  width: 100%;
+  padding: 4px;
+}
