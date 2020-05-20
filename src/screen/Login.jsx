@@ -12,10 +12,12 @@ const Login = () => {
   const history = useHistory();
   const onSubmit = async (params) => {
     const result = await handleLogin(params);
+    console.log(result);
     if (!result.error) {
+      setState(result);
       history.push("/home");
     } else {
-      setState({ error: result.error, message: result.message });
+      setState(result);
     }
   };
   return (
@@ -23,7 +25,7 @@ const Login = () => {
       <div className="container">
         <h3>Conecteaza-te cu contul </h3>
         <img src={logo} className="logo" alt="logo" />
-        <Form initialValue={userLogin} onSubmit={onSubmit} />
+        <Form initialValue={userLogin} onSubmit={onSubmit} buttonName={"Login"} />
         <p>
           Nu ai cont? Inregistreazate <NavLink to={"/register"}>aici</NavLink>
         </p>

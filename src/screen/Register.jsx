@@ -4,15 +4,18 @@ import { userRegister } from "../functionalities/mocks";
 import { useHistory } from "react-router-dom";
 import { handleRegister } from "../functionalities/firebase/request";
 import { AppContext } from "../AppContext";
+import "./styleScreen.css";
 
 export default function Register() {
-  const {setState}=useContext(AppContext);
+  const { setState } = useContext(AppContext);
   const history = useHistory();
   const onSubmit = async (params) => {
     if (params.password === params.password2) {
       const result = await handleRegister(params);
       if (!result.error) {
         history.push("/home");
+      } else {
+        setState({ ...result, navbar: "don't appear" });
       }
     } else {
       localStorage.setItem("error", 1);
@@ -27,7 +30,11 @@ export default function Register() {
     <div className="registerComponent">
       <div className="container">
         <h1>REGISTER</h1>
-        <Form initialValue={userRegister} onSubmit={onSubmit} />
+        <Form
+          initialValue={userRegister}
+          onSubmit={onSubmit}
+          buttonName={"Register"}
+        />
       </div>
     </div>
   );

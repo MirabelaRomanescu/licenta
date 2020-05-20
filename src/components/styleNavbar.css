@@ -1,0 +1,84 @@
+.navbar {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: #e6452f;
+  margin: unset;
+}
+
+.primaryUL {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  list-style: none;
+  margin: unset;
+}
+
+.primaryUL .logo {
+  flex: 6;
+}
+
+.primaryUL li {
+  flex: 1;
+}
+
+.primaryUL li a {
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+}
+
+.primaryUL li a img {
+  height: 30px;
+  margin: auto;
+}
+
+.primaryUL .signOut {
+  position: relative;
+}
+
+.primaryUL .signOut .secondaryUL {
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  display: none;
+  transform: translateX(-40%);
+  background: #e6452f;
+  text-align: center;
+  margin: auto;
+  padding: 20px 20px 8px 20px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.primaryUL .signOut:hover .secondaryUL {
+  display: block;
+}
+
+.primaryUL .signOut .secondaryUL > li {
+  font-size: 13px;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+  .primaryUL .logo {
+    flex: 4;
+  }
+}
+@media (max-width: 1050px) {
+  .primaryUL .logo {
+    flex: 2;
+  }
+}
+@media (max-width: 900px) {
+  .primaryUL .logo {
+    flex: 1;
+  }
+}

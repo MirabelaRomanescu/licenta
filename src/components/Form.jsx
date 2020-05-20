@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Button from "./Button";
 import "./styleForm.css";
 
-const Form = ({ initialValue, onSubmit }) => {
+const Form = ({ initialValue, onSubmit, buttonName }) => {
   const [value, setValue] = useState(initialValue);
 
   const onChange = (e) => {
@@ -36,7 +36,7 @@ const Form = ({ initialValue, onSubmit }) => {
           </div>
         ))}
         <div className="fieldButton">
-          <Button type={"submit"} buttonName={"Login"} style={"center"} />
+          <Button type={"submit"} buttonName={buttonName} styleButton={"center"} />
         </div>
       </form>
     </>
