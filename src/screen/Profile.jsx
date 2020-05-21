@@ -14,15 +14,19 @@ const Profile = () => {
   console.log(history);
   return (
     <>
-      <Navbar option="profile"/>
+      <Navbar option="profile" />
       <div className="componentScreen">
-        <Leftbar render={createLeftBarProfile} />
-        <h3>Profile</h3>
-        <h4>{section}</h4>
+        <div className="lateralNavbar">
+          <Leftbar render={createLeftBarProfile} />
+        </div>
+        <div className="lateralContent">
+          <h1>
+            Profilul meu <span className="submenuStyle">>> {section} </span>
+          </h1>
+        </div>
       </div>
     </>
   );
 };
 
 export default Profile;
- 

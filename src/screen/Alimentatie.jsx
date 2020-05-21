@@ -5,7 +5,9 @@ const Alimentatie = () => {
   return (
     <div>
       <Navbar option="alimentatie" />
+      <div className="lateralContent">
       <h3>Alimentatie</h3>
+      </div>
     </div>
   );
 };

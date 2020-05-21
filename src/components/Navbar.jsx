@@ -12,8 +12,9 @@ const Navbar = ({option}) => {
   const history = useHistory();
   const email = localStorage.getItem("user");
   const activeStyle = {
-    fontWeight: "bold",
     color: "white",
+    backgroundColor: "#3DAA8D",
+    boxShadow: "0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19)"
   };
 
   const handleSignOutButton = async () => {
@@ -30,17 +31,22 @@ const Navbar = ({option}) => {
     <div className="navbar">
       <ul className="primaryUL">
         <li className="logo">
-          <NavLink to="\home">
+          <NavLink to="/home">
             <img src={Logo} alt="logo" />
           </NavLink>
         </li>
-        <li>
-          <NavLink
-            to="/profile/parametrii"
-            style={option === "profile" ? activeStyle : {}}
-          >
-            Profile
-          </NavLink>
+        <li className="signOut">
+          <FaUserAlt className="iconUser"/>
+          <ul className="secondaryUL">
+            <li>{email}</li>
+            <li>
+              <Button
+                buttonName={"Sign Out"}
+                styleButton={"signOutButton"}
+                action={handleSignOutButton}
+              />
+            </li>
+          </ul>
         </li>
         <li>
           <NavLink
@@ -58,19 +64,15 @@ const Navbar = ({option}) => {
             Despre Diabet
           </NavLink>
         </li>
-        <li className="signOut">
-          <FaUserAlt />
-          <ul className="secondaryUL">
-            <li>{email}</li>
-            <li>
-              <Button
-                buttonName={"Sign Out"}
-                styleButton={"signOutButton"}
-                action={handleSignOutButton}
-              />
-            </li>
-          </ul>
+        <li>
+          <NavLink
+            to="/profile/parametrii"
+            style={option === "profile" ? activeStyle : {}}
+          >
+            Profilul meu
+          </NavLink>
         </li>
+
       </ul>
     </div>
   );

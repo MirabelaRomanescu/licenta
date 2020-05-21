@@ -1,23 +1,47 @@
 .generalButton{
-    padding: 7px 40px;
+    padding: 10px 50px;
     display: flex;
+    margin-bottom: 30px;
+    background: var(--lovelyblue);
+    color: var(--gray1);
+    border: 1px solid var(--lovelyblue);
+    border-radius: 8px;
+    font-size: larger;
+}
+
+.generalButton:hover {
+    background: var(--lovelydarkerblue);
+    color: var(--gray1);
+    border: 1px solid var(--gray1);
 }
 
 .center{
     margin:auto;
+    margin-bottom: 15px;
 }
 
-.signOutButton{
-    background: unset;
-    border: none;
+.signOutButton {
+    display: unset;
+    padding: 10px 20px;
+}
+
+.signOutButton:hover {
+    border: 1px solid var(--gray2);
+}
+
+/* .signOutButton{
+    background: var(--lovelyblue);
+    border: 1px solid var(--lovelyblue);
     padding: 10px;
     font-weight: bold;
     transition: background 1s;
     border-radius:4px;
     padding: 6px 10px 5px 10px;
+    display: unset;
 }
 
 .signOutButton:hover{
-    background: rgba(255, 255, 255, 0.493);
-    color: rgba(0, 0, 0, 0.548);
-}
+    background: var(--lovelydarkerblue);
+    color: var(--gray1);
+    border: none;
+} */

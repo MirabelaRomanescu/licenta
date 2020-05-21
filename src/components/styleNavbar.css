@@ -1,84 +1,88 @@
-.navbar {
+.navBar {
   position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50px;
-  background: #e6452f;
-  margin: unset;
 }
 
 .primaryUL {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  height: 50px;
   list-style: none;
-  margin: unset;
-}
-
-.primaryUL .logo {
-  flex: 6;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--darkgray);
+  width: 100%;
+  z-index: 10;
 }
 
 .primaryUL li {
-  flex: 1;
+  float: right;
+  display: block;
+  margin: 0;
+  padding: 15px 0px;
 }
 
 .primaryUL li a {
-  text-decoration: none;
+  color: var(--gray1);
   text-align: center;
-  color: black;
-  font-weight: bold;
+  font-size: 20px;
+  padding: 15px 30px;
+  text-decoration: none;
 }
 
-.primaryUL li a img {
-  height: 30px;
-  margin: auto;
+.primaryUL li a:hover:not(.active) {
+  background: var(--darkergray);
+}
+
+.primaryUL li a:hover.active {
+  opacity: 80%;
+}
+
+.primaryUL .logo {
+  float: left;
+  width: 100px;
+  text-align: center;
+}
+
+.primaryUL .logo img {
+  height: 18px;
+}
+
+.primaryUL .logo:hover {
+  background-color: var(--darkergray);
 }
 
 .primaryUL .signOut {
-  position: relative;
+  color: white;
+  width: 100px;
+  text-align: center;
+  padding: 18px 0px;
 }
 
 .primaryUL .signOut .secondaryUL {
-  list-style: none;
   position: absolute;
-  top: 100%;
+  top: 58px;
+  right: 0px;
   display: none;
-  transform: translateX(-40%);
-  background: #e6452f;
+  width: fit-content;
+  margin:0px;
+  padding: 8px;
+  color: var(--gray1);
+  background-color: var(--darkgray);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
+  z-index: 1;
+}
+
+.primaryUL .signOut .secondaryUL li {
+  text-decoration: none;
+  color: var(--lovelyblue);
   text-align: center;
-  margin: auto;
-  padding: 20px 20px 8px 20px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  width: 100%;
 }
 
 .primaryUL .signOut:hover .secondaryUL {
   display: block;
+  cursor: pointer;
+  background-color: var(--gray2);
 }
 
-.primaryUL .signOut .secondaryUL > li {
-  font-size: 13px;
-  font-family: sans-serif;
-  font-weight: 600;
-}
-
-@media (max-width: 1200px) {
-  .primaryUL .logo {
-    flex: 4;
-  }
-}
-@media (max-width: 1050px) {
-  .primaryUL .logo {
-    flex: 2;
-  }
-}
-@media (max-width: 900px) {
-  .primaryUL .logo {
-    flex: 1;
-  }
+.primaryUL .signOut:hover {
+  background-color: var(--darkergray);
 }

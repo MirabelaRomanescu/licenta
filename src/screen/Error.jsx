@@ -13,7 +13,7 @@ const Error = ({ errorMessage }) => {
   return (
     <div className="errorScreen">
       <div className="errorComponent">
-        <h3> Error </h3>
+        <h1> Error </h1>
         <div className="errorMessage">
           <p> {errorMessage}</p>
         </div>

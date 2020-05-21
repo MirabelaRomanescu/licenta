@@ -18,17 +18,21 @@ const App = () => {
     <AppContext.Provider value={{ state, setState }}>
       {!!state && state.error ? <Error errorMessage={state.message} /> : ""}
       <BrowserRouter>
-        <section>
-          <Switch>
-            <PrivateRoute path="/home" component={Home}></PrivateRoute>
-            <PrivateRoute path="/profile/:section" component={Profile}></PrivateRoute>
-            <PrivateRoute path="/alimentatie" component={Alimentatie}></PrivateRoute>
-            <PrivateRoute path="/despreDiabet" component={Diabet}></PrivateRoute>
-            <Route path="/register" component={Register}></Route>
-            <Route path="/login" component={Login}></Route>
-            <Route path="/" exact component={Login}></Route>
-          </Switch>
-        </section>
+        <Switch>
+          <PrivateRoute path="/home" component={Home}></PrivateRoute>
+          <PrivateRoute
+            path="/profile/:section"
+            component={Profile}
+          ></PrivateRoute>
+          <PrivateRoute
+            path="/alimentatie"
+            component={Alimentatie}
+          ></PrivateRoute>
+          <PrivateRoute path="/despreDiabet" component={Diabet}></PrivateRoute>
+          <Route path="/register" component={Register}></Route>
+          <Route path="/login" component={Login}></Route>
+          <Route path="/" exact component={Login}></Route>
+        </Switch>
       </BrowserRouter>
     </AppContext.Provider>
   );

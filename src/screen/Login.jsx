@@ -23,11 +23,11 @@ const Login = () => {
   return (
     <div className="loginComponent">
       <div className="container">
-        <h3>Conecteaza-te cu contul </h3>
+        <h1>CONECTARE</h1>
         <img src={logo} className="logo" alt="logo" />
         <Form initialValue={userLogin} onSubmit={onSubmit} buttonName={"Login"} />
         <p>
-          Nu ai cont? Inregistreazate <NavLink to={"/register"}>aici</NavLink>
+          Nu ai cont? Înregistrează-te <NavLink to={"/register"}>aici</NavLink>
         </p>
       </div>
     </div>

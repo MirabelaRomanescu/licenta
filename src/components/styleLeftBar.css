@@ -1,5 +1,32 @@
 .leftBar {
-  background: gray;
-  width: 360px;
+  width: 300px;
+  overflow: auto;
+  background: var(--grey2);
   height: 100%;
+  background-color: var(--gray2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.leftBar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  width: inherit;
+}
+
+.leftBar ul li a {
+  display: block;
+  text-decoration: none;
+  background: var(--gray2);
+  color: var(--darkergray);
+  padding: 14px 20px;
+}
+
+.leftBar ul li a:active {
+  background: var(--lovelyblue);
+}
+
+.leftBar ul li a:hover {
+  background: var(--gray3);
 }

@@ -29,7 +29,7 @@ export default function Register() {
   return (
     <div className="registerComponent">
       <div className="container">
-        <h1>REGISTER</h1>
+        <h1>ÎNREGISTRARE</h1>
         <Form
           initialValue={userRegister}
           onSubmit={onSubmit}
