@@ -53,7 +53,7 @@ const Navbar = ({option}) => {
             to="/alimentatie"
             style={option === "alimentatie" ? activeStyle : {}}
           >
-            Alimentatie
+            ALIMENTAȚIE
           </NavLink>
         </li>
         <li>
@@ -61,7 +61,7 @@ const Navbar = ({option}) => {
             to="/despreDiabet"
             style={option === "diabet" ? activeStyle : {}}
           >
-            Despre Diabet
+            DESPRE DIABET
           </NavLink>
         </li>
         <li>
@@ -69,7 +69,7 @@ const Navbar = ({option}) => {
             to="/profile/parametrii"
             style={option === "profile" ? activeStyle : {}}
           >
-            Profilul meu
+            PROFILUL MEU
           </NavLink>
         </li>
 

@@ -10,6 +10,7 @@ import Register from "./screen/Register";
 import PrivateRoute from "./PrivateRoute";
 import Error from "./screen/Error";
 import "./App.css";
+import Addalimente from "./screen/AddAlimenteToDatabase";
 
 const App = () => {
   const [state, setState] = useState(null);
@@ -29,6 +30,7 @@ const App = () => {
             component={Alimentatie}
           ></PrivateRoute>
           <PrivateRoute path="/despreDiabet" component={Diabet}></PrivateRoute>
+          <Route path="/addAlimentatieToDatabase" component={Addalimente}></Route>
           <Route path="/register" component={Register}></Route>
           <Route path="/login" component={Login}></Route>
           <Route path="/" exact component={Login}></Route>

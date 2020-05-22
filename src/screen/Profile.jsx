@@ -2,19 +2,25 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Leftbar from "../components/LeftBarSelection";
 import "./styleScreen.css";
-import { useParams, useLocation, useHistory } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { createLeftBarProfile } from "../functionalities/mocks";
+import Parametrii from "./profile/Parametrii";
 
 const Profile = () => {
   const { section } = useParams();
-  const path = useLocation();
-  const history = useHistory();
-  console.log(section);
-  console.log(path);
-  console.log(history);
+  const _renderFetchSection = () => {
+    switch (section) {
+      case "parametrii":
+        return <Parametrii />;
+      default:
+        return "";
+    }
+  };
   return (
     <>
-      <Navbar option="profile" />
+      <div className="fixNav">
+        <Navbar option="profile" />
+      </div>
       <div className="componentScreen">
         <div className="lateralNavbar">
           <Leftbar render={createLeftBarProfile} />
@@ -23,6 +29,8 @@ const Profile = () => {
           <h1>
             Profilul meu <span className="submenuStyle">>> {section} </span>
           </h1>
+          <div className="titleSeparationLine"></div>
+          {_renderFetchSection()}
         </div>
       </div>
     </>

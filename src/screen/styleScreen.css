@@ -16,21 +16,43 @@
   flex-direction: column;
   align-items: center;
   background-color: var(--gray2);
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
 
+.fixNav {
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+}
 
 .lateralContent {
   width: auto;
-  padding-left: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
   font-weight: bold;
+  padding-top: 70px;
+  text-align: justify;
+}
+
+.lateralNavbar {
+  padding-top: 58px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 .submenuStyle {
   color: var(--darkgray);
   font-size: 24px;
+  font-style: italic;
 }
+
+.titleSeparationLine {
+  padding: 1px 100%;
+  background-color: var(--lovelyblue);
+  margin: 30px 0px;
+}
+
+
+
 .componentScreen {
   display: flex;
   flex-direction: row;

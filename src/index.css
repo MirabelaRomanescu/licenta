@@ -31,7 +31,9 @@ h1 {
 }
 
 p {
-  color: var(--darkgray);
+  color: var(--darkergray);
+  font-weight: 400;
+  font-size: larger;
 }
 
 code {
