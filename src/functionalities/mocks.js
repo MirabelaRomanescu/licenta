@@ -38,23 +38,24 @@ export const createLeftBarAlimente = [
 ]
 
 export const addAlimenteToDatabase = [
-    { value: "", name: "denumire", type: "text", placeholder: "denumire" },
-    { value: "", name: "kcal100g", type: "number", placeholder: "kcal/100g" },
-    { value: "", name: "kcalportie", type: "text", placeholder: "kcal/portie" },
-    {
-        value: [
-            { value: "fructe", label: "fructe", name: 'categorie' },
-            { value: "legume", label: "legume", name: 'categorie' },
-            { value: "carne", label: "carne", name: 'categorie' },
-            { value: "lactate", label: "lactate", name: 'categorie' },
-            { value: "fainoase", label: "fainoase", name: 'categorie' },
-        ], name: "categorie", type: "select", placeholder: "Categorie"
-    },
-    {
-        value: [
-            { value: "high", label: "high", name: "indice glicemie" },
-            { value: "low", label: "low", name: "indice glicemie" },
-            { value: "medium", label: "medium", name: "indice glicemie" },
-        ], name: "indice glicemie", type: "select", placeholder: "Indice glicemie"
-    }
+    { value: "", name: "denumire", type: "text", placeholder: "Denumire" },
+    { value: "", name: "kcal100g", type: "number", placeholder: "Kcal/100g" },
+    { value: "", name: "kcalportie", type: "number", placeholder: "Kcal/portie" },
+    { value: "", name: "definitieportie", type: "text", placeholder: "Definitie portie" },
 ]
+
+export const valueSelectaddAlimenteToDatabase = [{
+    value: [
+        { value: "fructeSeminte", label: "Fructe/Seminte", name: 'categorie' },
+        { value: "carnePesteMezeluri", label: "Carne/Peste/Mezeluri", name: 'categorie' },
+        { value: "bauturi", label: "Bauturi alcoolice/nonalcoolice", name: 'categorie' },
+        { value: "lactateBranzeturi", label: "Lactate/Branzeturi", name: 'categorie' },
+        { value: "ingredienteCondimente", label: "Ingrediente/Condimente", name: 'categorie' },
+        { value: "dulciuriPrajituri", label: "Dulciuri/Prajituri", name: 'categorie' },
+        { value: "painePaste", label: "Paine/Paste", name: 'categorie' },
+        { value: "legumeCereale", label: "legume/Cereale", name: 'categorie' }
+    ],
+    name: "categorie",
+    placeholder: "Categorie",
+    type: "select"
+}]

@@ -1,20 +1,20 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { NavLink, useHistory } from "react-router-dom";
-import Logo from "../assets/logo.png";
+import Logo from "../assets/logoDiabookOrizontal.png";
 import { FaUserAlt } from "react-icons/fa";
 import Button from "./Button";
 import "./styleNavbar.css";
 import { handleSignOut } from "../functionalities/firebase/request";
 import { AppContext } from "../AppContext";
 
-const Navbar = ({option}) => {
+const Navbar = ({ option }) => {
   const { setState } = useContext(AppContext);
   const history = useHistory();
-  const email = localStorage.getItem("user");
   const activeStyle = {
     color: "white",
     backgroundColor: "#3DAA8D",
-    boxShadow: "0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19)"
+    boxShadow:
+      "0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19)",
   };
 
   const handleSignOutButton = async () => {
@@ -36,17 +36,16 @@ const Navbar = ({option}) => {
           </NavLink>
         </li>
         <li className="signOut">
-          <FaUserAlt className="iconUser"/>
-          <ul className="secondaryUL">
-            <li>{email}</li>
-            <li>
-              <Button
-                buttonName={"Sign Out"}
-                styleButton={"signOutButton"}
-                action={handleSignOutButton}
-              />
-            </li>
-          </ul>
+          <div className="iconUser">
+            <FaUserAlt />
+          </div>
+          <div className="divSignOutButton">
+          <Button
+            buttonName={"Sign Out"}
+            styleButton={"signOutButton"}
+            action={handleSignOutButton}
+          />
+          </div>
         </li>
         <li>
           <NavLink
@@ -72,7 +71,6 @@ const Navbar = ({option}) => {
             PROFILUL MEU
           </NavLink>
         </li>
-
       </ul>
     </div>
   );

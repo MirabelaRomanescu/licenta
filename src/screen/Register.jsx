@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 import { handleRegister } from "../functionalities/firebase/request";
 import { AppContext } from "../AppContext";
 import "./styleScreen.css";
+import logo from "../assets/logoDiabookVertical.png";
 
 export default function Register() {
   const { setState } = useContext(AppContext);
@@ -30,6 +31,7 @@ export default function Register() {
     <div className="registerComponent">
       <div className="container">
         <h1>ÎNREGISTRARE</h1>
+        <img src={logo} className="verticalLogo" alt="logo" />
         <Form
           initialValue={userRegister}
           onSubmit={onSubmit}

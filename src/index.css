@@ -33,7 +33,10 @@ h1 {
 p {
   color: var(--darkergray);
   font-weight: 400;
-  font-size: larger;
+  font-size: large;
+  letter-spacing: 1px;
+  /* margin-top: 5px;
+  margin-bottom: 5px; */
 }
 
 code {

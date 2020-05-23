@@ -1,12 +1,12 @@
 .generalButton{
-    padding: 10px 50px;
+    padding: 8px 35px;
     display: flex;
-    margin-bottom: 30px;
     background: var(--lovelyblue);
     color: var(--gray1);
     border: 1px solid var(--lovelyblue);
-    border-radius: 8px;
-    font-size: larger;
+    border-radius: 10px;
+    font-size: large;
+    margin:auto;
 }
 
 .generalButton:hover {
@@ -15,14 +15,10 @@
     border: 1px solid var(--gray1);
 }
 
-.center{
-    margin:auto;
-    margin-bottom: 15px;
-}
-
 .signOutButton {
     display: unset;
-    padding: 10px 20px;
+    font-size: 14px;
+    padding: 2px 9px;
 }
 
 .signOutButton:hover {

@@ -1,9 +1,12 @@
 import React from "react";
 import Form from "../components/Form";
-import { addAlimenteToDatabase } from "../functionalities/mocks";
+import {
+  addAlimenteToDatabase,
+  valueSelectaddAlimenteToDatabase,
+} from "../functionalities/mocks";
 import {
   readFromDatabase,
-  addToDatabase
+  addToDatabase,
 } from "../functionalities/firebase/request";
 import Button from "../components/Button";
 
@@ -20,6 +23,7 @@ const Addalimente = () => {
   return (
     <>
       <Form
+        selectValue={valueSelectaddAlimenteToDatabase}
         initialValue={addAlimenteToDatabase}
         buttonName={"Add To DataBase"}
         onSubmit={handleSubmit}

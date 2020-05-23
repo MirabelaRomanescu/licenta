@@ -6,10 +6,10 @@ import {
   handleLogin,
   handleLoginWithGoogle,
 } from "../functionalities/firebase/request";
-import logo from "../assets/logo.png";
+import logo from "../assets/logoDiabookVertical.png";
 import "./styleScreen.css";
 import { AppContext } from "../AppContext";
-import { FcGoogle } from "react-icons/fc";
+import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
   const { setState } = useContext(AppContext);
@@ -36,18 +36,19 @@ const Login = () => {
     <div className="loginComponent">
       <div className="container">
         <h1>CONECTARE</h1>
-        <img src={logo} className="logo" alt="logo" />
+        <img src={logo} className="verticalLogo" alt="logo" />
         <Form
           initialValue={userLogin}
           onSubmit={onSubmit}
-          buttonName={"Login"}
+          buttonName={"Conectează-te"}
         />
-        <p> ------------- or --------------</p>
-        <button onClick={loginwithGoogle}>
-          Login with <FcGoogle />
+        <p>sau</p>
+        <button className="generalButton" onClick={loginwithGoogle}>
+          Conectează-te cu contul &nbsp; <FaGoogle  />
         </button>
+        <div className="formSeparationLine"></div>
         <p>
-          Nu ai cont? Înregistrează-te <NavLink to={"/register"}>aici</NavLink>
+          Nu ai cont Diabook? Înregistrează-te <NavLink className="linkStyle" to={"/register"}>aici</NavLink>
         </p>
       </div>
     </div>

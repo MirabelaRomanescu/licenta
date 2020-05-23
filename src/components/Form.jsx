@@ -3,8 +3,9 @@ import Button from "./Button";
 import "./styleForm.css";
 import Select from "react-select";
 
-const Form = ({ initialValue, onSubmit, buttonName }) => {
+const Form = ({ initialValue, onSubmit, buttonName, selectValue }) => {
   const [value, setValue] = useState(initialValue);
+  const [selectedV, setSelectedV] = useState({});
 
   const onChange = (e) => {
     const newValue = [...value];
@@ -15,55 +16,49 @@ const Form = ({ initialValue, onSubmit, buttonName }) => {
 
   const handleSelectChange = (selected) => {
     if (!selected) return;
-    const newValue = [...value];
-    const index = newValue.findIndex((value) => value.name === selected.name);
-    newValue[index] = { ...newValue[index], value: selected.value };
-    setValue(newValue);
+    setSelectedV({ [selected.name]: selected.value });
   };
 
   const formHandler = (e) => {
     e.preventDefault();
-    const newObject = {};
+    let newObject = {};
     value.forEach((item) => {
       newObject[item.name] = item.value;
     });
+    newObject = { ...newObject, ...selectedV };
     onSubmit(newObject);
-    setValue(initialValue)
   };
   return (
     <>
       <form onSubmit={formHandler}>
-        {value.map((item) =>
-          item.type !== "select" ? (
-            <div key={item.name} className="fields">
-              <input
-                required
-                value={item.value}
-                type={item.type}
-                onChange={onChange}
-                name={item.name}
-                placeholder={item.placeholder || ""}
-              ></input>
-            </div>
-          ) : (
-            <div key={item.name} className="fields">
-              <Select
-                placeholder={item.placeholder}
-                name={item.name}
-                options={item.value}
-                onChange={handleSelectChange}
-                isClearable
-                isSearchable
-              />
-            </div>
-          )
-        )}
+        {value.map((item) => (
+          <div key={item.name} className="fields">
+            <input
+              required
+              value={item.value}
+              type={item.type}
+              onChange={onChange}
+              name={item.name}
+              placeholder={item.placeholder || ""}
+            ></input>
+          </div>
+        ))}
+        {!!selectValue
+          ? selectValue.map((item) => (
+              <div key={item.name} className="fields">
+                <Select
+                  placeholder={item.placeholder}
+                  name={item.name}
+                  options={item.value}
+                  onChange={handleSelectChange}
+                  isClearable
+                  isSearchable
+                />
+              </div>
+            ))
+          : ""}
         <div className="fieldButton">
-          <Button
-            type={"submit"}
-            buttonName={buttonName}
-            styleButton={"center"}
-          />
+          <Button type={"submit"} buttonName={buttonName} />
         </div>
       </form>
     </>

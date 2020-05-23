@@ -7,8 +7,9 @@
 
 .loginComponent .container,
 .registerComponent .container {
-  width: 350px;
+  width: 500px;
   position: relative;
+  padding-bottom: 30px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -22,6 +23,37 @@
 .fixNav {
   position: fixed;
   width: 100%;
+  overflow: hidden;
+}
+
+.submenuStyle {
+  color: var(--darkgray);
+  font-size: 24px;
+  font-style: italic;
+}
+
+.titleSeparationLine {
+  padding: 1px 100%;
+  background-color: var(--lovelyblue);
+  margin: 30px 0px;
+}
+
+.formSeparationLine {
+  padding: 0.5px 220px;
+  background-color: var(--lovelyblue);
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.linkStyle {
+  color: var(--lovelyblue);
+}
+
+.componentScreen {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -39,30 +71,13 @@
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
-.submenuStyle {
-  color: var(--darkgray);
-  font-size: 24px;
-  font-style: italic;
-}
-
-.titleSeparationLine {
-  padding: 1px 100%;
-  background-color: var(--lovelyblue);
-  margin: 30px 0px;
-}
-
-
-
-.componentScreen {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+.verticalLogo {
+  height: 170px;
+  width: auto;
+  padding-bottom: 20px;
 }
 
 .errorScreen {
-  z-index: 100;
   width: 100%;
   height: 100%;
   position: absolute;
