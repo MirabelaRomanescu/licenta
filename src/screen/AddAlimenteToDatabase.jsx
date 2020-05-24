@@ -9,6 +9,7 @@ import {
   addToDatabase,
 } from "../functionalities/firebase/request";
 import Button from "../components/Button";
+import { formatAlimentatieData } from "../functionalities/helper";
 
 const Addalimente = () => {
   const handleSubmit = async (data) => {
@@ -17,7 +18,7 @@ const Addalimente = () => {
   };
   const consoleLOG = async () => {
     const res = await readFromDatabase("alimente");
-    console.table(res);
+    console.table(formatAlimentatieData(res));
   };
 
   return (

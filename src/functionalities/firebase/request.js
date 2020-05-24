@@ -1,7 +1,8 @@
 import firebaseApp from "./config";
-import database from "firebase/database"
-import { formatAlimentatieData, formatParametrii } from "../helper";
+import database from "firebase/database";
 import firebase from "firebase/app";
+
+const firebase_DB = firebaseApp.database().ref();
 
 export const handleLogin = async (data) => {
   const { email, password } = data;
@@ -88,35 +89,41 @@ export const handleSignOut = async () => {
   return response;
 };
 
+export const updateToDatabase = async (typeData, data) => {
+  const updates = {};
+  updates[typeData] = data;
+  await firebase_DB.update(updates)
+    .then(res => res)
+    .catch(err => console.log(err));
+}
+
 export const addToDatabase = async (typeData, data) => {
-  const response = await firebaseApp.database().ref().child(typeData).push(data)
+  const response = await firebase_DB.child(typeData).push(data)
     .then(res => res)
     .catch(err => err);
   return (response)
 }
 
 export const readFromDatabase = async (typedata) => {
-  const response = await firebaseApp.database().ref().child(typedata).once("value")
+  const response = await firebase_DB.child(typedata).once("value")
     .then(snap => snap.val())
     .catch(err => err)
-  return formatAlimentatieData(response);
+  return response;
 }
 
 export const addUserdata = async (data, typedata) => {
   const id = localStorage.getItem("id");
   const updates = {};
   updates[`/profile/${typedata}/${id}`] = data;
-  await firebaseApp.database().ref().update(updates)
+  await firebase_DB.update(updates)
     .then(res => res)
     .catch(err => console.log(err));
 }
 
 export const readUserdata = async (typeData) => {
   const id = localStorage.getItem("id");
-  const res = firebaseApp.database().ref()
-    .child("profile").child(typeData)
-    .child(id).once("value")
+  const res = await firebase_DB.child(`profile/${typeData}/${id}`).once('value')
     .then(snap => snap.val())
-    .catch(err => err);
+    .catch(err => err)
   return res
 }

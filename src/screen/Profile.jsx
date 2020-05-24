@@ -11,7 +11,7 @@ const Profile = () => {
   const _renderFetchSection = () => {
     switch (section) {
       case "parametrii":
-        return <Parametrii />;
+        return <Parametrii isLoading={true}/>;
       default:
         return "";
     }

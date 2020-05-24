@@ -3,7 +3,13 @@ import Button from "./Button";
 import "./styleForm.css";
 import Select from "react-select";
 
-const Form = ({ initialValue, onSubmit, buttonName, selectValue }) => {
+const Form = ({
+  initialValue,
+  onSubmit,
+  buttonName,
+  selectValue,
+  displayLabel,
+}) => {
   const [value, setValue] = useState(initialValue);
   const [selectedV, setSelectedV] = useState({});
 
@@ -33,6 +39,7 @@ const Form = ({ initialValue, onSubmit, buttonName, selectValue }) => {
       <form onSubmit={formHandler}>
         {value.map((item) => (
           <div key={item.name} className="fields">
+            {displayLabel && item.placeholder}
             <input
               required
               value={item.value}

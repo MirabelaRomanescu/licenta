@@ -8,6 +8,7 @@ form {
 .fields {
   padding: 3px;
   width: 100%;
+  text-align: left;
 }
 
 .fields input {
