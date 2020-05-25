@@ -30,11 +30,15 @@ export const createLeftBarProfile = [
 ]
 
 export const createLeftBarAlimente = [
-    { path: "/alimentatie/fructe", text: "Fructe" },
-    { path: "/alimentatie/legume", text: "Legume" },
-    { path: "/alimentatie/fainoase", text: "Fainoase" },
-    { path: "/alimentatie/dulciuri", text: "Dulciuri" },
-    { path: "/alimentatie/calculator", text: "Calculeaza-mi masa" }
+    { path: "/alimentatie/calculator", text: "Calculeaza-mi masa" },
+    { path: "/alimentatie/fructeSeminte", text: "Fructe si Seminte" },
+    { path: "/alimentatie/legumeCereale", text: "Legume si cereale" },
+    { path: "/alimentatie/painePaste", text: "Paine si paste" },
+    { path: "/alimentatie/carnePesteMezeluri", text: "Carne/Peste/Mezeluri" },
+    { path: "/alimentatie/lactateBranzeturi", text: "Lactate si Branzeturi" },
+    { path: "/alimentatie/dulciuriPrajituri", text: "Dulciuri si Prajituri" },
+    { path: "/alimentatie/ingredienteCondimente", text: "Ingrediente si Condimente" },
+    { path: "/alimentatie/bauturi", text: "Bauturi Alcoolice si Nonalcoolice" }
 ]
 
 export const addAlimenteToDatabase = [

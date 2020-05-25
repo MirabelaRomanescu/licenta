@@ -49,7 +49,7 @@ const Navbar = ({ option }) => {
         </li>
         <li>
           <NavLink
-            to="/alimentatie"
+            to="/alimentatie/calculator"
             style={option === "alimentatie" ? activeStyle : {}}
           >
             ALIMENTAȚIE

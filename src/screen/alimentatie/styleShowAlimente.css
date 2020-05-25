@@ -1,0 +1,21 @@
+.tableAlimentatie {
+  list-style: none;
+  color: black;
+  text-align: left;
+  width: 80%;
+  margin: auto;
+  display: block;
+  padding: unset;
+}
+
+.tableAlimentatie li .rowTableAlimentatie {
+  width: 100%;
+  list-style: none;
+  display: inline-flex;
+  padding: unset;
+}
+
+.tableAlimentatie li .rowTableAlimentatie li {
+  width: 25%;
+  margin: 10px;
+}

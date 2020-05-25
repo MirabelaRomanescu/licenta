@@ -26,7 +26,7 @@ const App = () => {
             component={Profile}
           ></PrivateRoute>
           <PrivateRoute
-            path="/alimentatie"
+            path="/alimentatie/:section"
             component={Alimentatie}
           ></PrivateRoute>
           <PrivateRoute path="/despreDiabet" component={Diabet}></PrivateRoute>
