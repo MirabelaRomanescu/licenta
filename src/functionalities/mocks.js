@@ -20,6 +20,22 @@ export const editeazaParametrii = [
     { value: "", name: "tensiune arteriala", type: "number", placeholder: "Tensiune arteriala" },
 ]
 
+export const editeazaConsultaii = [
+    { value: "", name: "data", type: "text", placeholder: "Data" },
+    { value: "", name: "medic", type: "text", placeholder: "Medic" }
+]
+
+export const textareaConsultatii = [
+    {
+        value: "",
+        name: "recomandari",
+        placeholder: `Te rugam introdu recomandarile medicului aici! Observatie! Daca dai enter ti se va memora schimbarile, pentru a da pe un rand nou te rugam sa folosesti shift+enter. Multumim!`,
+        cols: 50,
+        rows: 10,
+        wrap: "true"
+    }
+]
+
 export const createLeftBarProfile = [
     { path: "/profile/parametrii", text: "Parametrii tai" },
     { path: "/profile/glicemie", text: "Glicemie" },
@@ -40,6 +56,18 @@ export const createLeftBarAlimente = [
     { path: "/alimentatie/ingredienteCondimente", text: "Ingrediente si Condimente" },
     { path: "/alimentatie/bauturi", text: "Bauturi Alcoolice si Nonalcoolice" }
 ]
+
+export const createLeftBarDiabet = [
+    { path: "/despreDiabet/informatiiGenerale", text: "Informatii generale" },
+    { path: "/despreDiabet/monitorizare", text: "Monitorizarea diabetului" },
+    { path: "/despreDiabet/complicatii", text: "Complicatii" },
+    { path: "/despreDiabet/medicatie", text: "Medicatie" },
+    { path: "/despreDiabet/fitoterapie", text: "Fitoterapie" },
+    { path: "/despreDiabet/despreAlimentatie", text: "Despre alimentatie" },
+    { path: "/despreDiabet/terapiiAlternative", text: "Terapii alternative" },
+    { path: "/despreDiabet/Altele", text: "Altele" },
+  ];
+  
 
 export const addAlimenteToDatabase = [
     { value: "", name: "denumire", type: "text", placeholder: "Denumire" },

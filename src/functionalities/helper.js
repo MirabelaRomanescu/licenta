@@ -1,4 +1,4 @@
-import { readUserdata, readFromDatabase, addToDatabase, updateToDatabase } from "./firebase/request";
+import { readProfileData, readFromDatabase, addToDatabase, updateToDatabase } from "./firebase/request";
 
 export const formatAlimentatieData = (data) => {
     const newData = []
@@ -20,9 +20,18 @@ export const formatPrametriiUser = (data) => {
     return newData
 }
 
+export const formatConsultatiiUser = (data) => {
+    const newData = [];
+    Object.entries(data).forEach(([key, val]) => {
+        newData.push({ ...val, key: key });
+    })
+    console.log("data", newData);
+    return newData;
+}
+
 export const handleGlicemieData = async () => {
     const id = localStorage.getItem('id');
-    let data = await readUserdata("glicemie")
+    let data = await readProfileData("glicemie")
     let key = [];
     let value = [];
     if (!!data) {

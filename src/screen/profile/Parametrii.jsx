@@ -3,8 +3,8 @@ import Button from "../../components/Button";
 import Form from "../../components/Form";
 import { editeazaParametrii } from "../../functionalities/mocks";
 import {
-  addUserdata,
-  readUserdata,
+  updateProfileData,
+  readProfileData,
 } from "../../functionalities/firebase/request";
 import {
   formatPrametriiUser,
@@ -20,7 +20,7 @@ const Parametrii = () => {
 
   useEffect(() => {
     const onMount = async () => {
-      const res = await readUserdata("parametrii");
+      const res = await readProfileData("parametrii");
       if (!!res) {
         const raspuns = [...formatPrametriiUser(res)];
         setLocalState([...raspuns]);
@@ -35,7 +35,7 @@ const Parametrii = () => {
   }, [isUpadateParam]);
 
   const handleSubmit = async (e) => {
-    await addUserdata(e, "parametrii");
+    await updateProfileData(e, "parametrii");
     await handleGlicemieData();
     setIsUpdateParam(Math.random());
     setLoading(true);

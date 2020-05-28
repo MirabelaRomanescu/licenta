@@ -1,0 +1,22 @@
+.tableConsultatii {
+    list-style: none;
+    color: black;
+    text-align: left;
+    width: 80%;
+    margin: auto;
+    display: block;
+    padding: unset;
+  }
+  
+  .tableConsultatii li .rowTableConsultatii {
+    width: 100%;
+    list-style: none;
+    display: inline-flex;
+    padding: unset;
+  }
+  
+  .tableConsultatii li .rowTableConsultatii li {
+    width: 25%;
+    margin: 10px;
+  }
+  

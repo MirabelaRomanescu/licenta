@@ -111,7 +111,15 @@ export const readFromDatabase = async (typedata) => {
   return response;
 }
 
-export const addUserdata = async (data, typedata) => {
+export const addProfileData = async (data, typedata) => {
+  const id = localStorage.getItem("id");
+  const response = await firebase_DB.child(`/profile/${typedata}/${id}`).push(data)
+    .then(res => res)
+    .catch(err => err)
+  return (response);
+}
+
+export const updateProfileData = async (data, typedata) => {
   const id = localStorage.getItem("id");
   const updates = {};
   updates[`/profile/${typedata}/${id}`] = data;
@@ -120,7 +128,7 @@ export const addUserdata = async (data, typedata) => {
     .catch(err => console.log(err));
 }
 
-export const readUserdata = async (typeData) => {
+export const readProfileData = async (typeData) => {
   const id = localStorage.getItem("id");
   const res = await firebase_DB.child(`profile/${typeData}/${id}`).once('value')
     .then(snap => snap.val())

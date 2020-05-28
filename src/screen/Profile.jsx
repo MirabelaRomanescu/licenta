@@ -5,13 +5,16 @@ import "./styleScreen.css";
 import { useParams } from "react-router-dom";
 import { createLeftBarProfile } from "../functionalities/mocks";
 import Parametrii from "./profile/Parametrii";
+import Consultatii from "./profile/Consultatii";
 
 const Profile = () => {
   const { section } = useParams();
   const _renderFetchSection = () => {
     switch (section) {
       case "parametrii":
-        return <Parametrii isLoading={true}/>;
+        return <Parametrii isLoading={true} />;
+      case "consultatii":
+        return <Consultatii />;
       default:
         return "";
     }

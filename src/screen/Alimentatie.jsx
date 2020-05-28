@@ -20,8 +20,6 @@ const Alimentatie = () => {
       const finalResult = formatAlimentatieData(result);
       setAlimente(finalResult);
       setIsLoading(false);
-      console.log("readDatabase Alimentatie");
-      console.log(finalResult);
     };
     onMount();
   }, []);

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { AppContext } from "./AppContext";
 import Home from "./screen/Home";
@@ -14,7 +14,7 @@ import Addalimente from "./screen/AddAlimenteToDatabase";
 
 const App = () => {
   const [state, setState] = useState(null);
-  console.log("function", state);
+  console.log("Global State", state);
   return (
     <AppContext.Provider value={{ state, setState }}>
       {!!state && state.error ? <Error errorMessage={state.message} /> : ""}
@@ -29,7 +29,7 @@ const App = () => {
             path="/alimentatie/:section"
             component={Alimentatie}
           ></PrivateRoute>
-          <PrivateRoute path="/despreDiabet" component={Diabet}></PrivateRoute>
+          <PrivateRoute path="/despreDiabet/:section" component={Diabet}></PrivateRoute>
           <Route path="/addAlimentatieToDatabase" component={Addalimente}></Route>
           <Route path="/register" component={Register}></Route>
           <Route path="/login" component={Login}></Route>

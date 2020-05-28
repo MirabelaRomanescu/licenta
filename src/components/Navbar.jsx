@@ -56,8 +56,8 @@ const Navbar = ({ option }) => {
           </NavLink>
         </li>
         <li>
-          <NavLink
-            to="/despreDiabet"
+        <NavLink
+            to="/despreDiabet/informatiiGenerale"
             style={option === "diabet" ? activeStyle : {}}
           >
             DESPRE DIABET
