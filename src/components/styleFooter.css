@@ -1,0 +1,24 @@
+.footer {
+    width: 100%;
+    margin-top: 100px;
+    padding: 15px 20px;
+    background-color: var(--darkergray);
+    color: var(--gray1); 
+    font-size: 15px;
+    display: inline-block;
+  }
+
+  .contact {
+      float: right;
+  }
+
+  .mail {
+    color: var(--lovelyblue);
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  .copyright {
+      text-align: left;
+  }
+

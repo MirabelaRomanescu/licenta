@@ -1,11 +1,13 @@
 .tableAlimentatie {
   list-style: none;
-  color: black;
-  text-align: left;
-  width: 80%;
+  text-align: center;
+  width: 90%;
   margin: auto;
+  font-weight: 300;
+  font-size: 17.5px;
   display: block;
   padding: unset;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
 .tableAlimentatie li .rowTableAlimentatie {
@@ -13,9 +15,28 @@
   list-style: none;
   display: inline-flex;
   padding: unset;
+  background-color: var(--gray2);
+  border-bottom: 1.5px solid var(--gray1); 
 }
+
+.tableAlimentatie li .headerTableAlimentatie {
+  color: var(--gray1);
+  background-color: var(--lovelyblue);
+  font-weight: bold;
+}
+
+.tableAlimentatie li .rowTableAlimentatie:hover {
+  background-color: var(--gray3);
+}
+
+.tableAlimentatie li .headerTableAlimentatie:hover {
+  background-color: var(--lovelyblue);
+}
+
+
 
 .tableAlimentatie li .rowTableAlimentatie li {
   width: 25%;
   margin: 10px;
 }
+

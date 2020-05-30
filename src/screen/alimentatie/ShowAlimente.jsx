@@ -5,7 +5,7 @@ const Alimente = ({ alimente, categorie }) => {
   return (
     <ul className="tableAlimentatie">
       <li>
-        <ul className="rowTableAlimentatie">
+        <ul className="rowTableAlimentatie headerTableAlimentatie">
           <li className="columnDenumire">Denumire</li>
           <li className="columnKcal100g">Kcal/100g</li>
           <li className="columnDefinitiePortie">Definitie portie</li>

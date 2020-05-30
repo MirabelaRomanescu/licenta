@@ -9,6 +9,7 @@ import { readFromDatabase } from "../functionalities/firebase/request";
 import { formatAlimentatieData } from "../functionalities/helper";
 import Alimente from "./alimentatie/ShowAlimente";
 import CalculatorMasa from "./alimentatie/CalculatorMasa";
+import Footer from "../components/Footer";
 
 const Alimentatie = () => {
   const { section } = useParams();
@@ -35,6 +36,7 @@ const Alimentatie = () => {
           <Leftbar render={createLeftBarAlimente} />
         </div>
         <div className="lateralContent">
+        <div className="text">
           <h1>
             Alimentatie <span className="submenuStyle">>> {section} </span>
           </h1>
@@ -45,6 +47,8 @@ const Alimentatie = () => {
             <Alimente alimente={alimente} categorie={section} />
           )
           }
+        </div>
+        <Footer/>
         </div>
       </div>
     </>

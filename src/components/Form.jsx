@@ -10,11 +10,11 @@ const Form = ({
   buttonName,
   selectValue,
   displayLabel,
+  selectIsMultiple = false,
 }) => {
   const [value, setValue] = useState(initialValue);
   const [selectedV, setSelectedV] = useState({});
   const [textareaV, setTextareaV] = useState(valueTextarea);
-
   const onChange = (e) => {
     const newValue = [...value];
     const index = newValue.findIndex((value) => value.name === e.target.name);
@@ -24,8 +24,20 @@ const Form = ({
 
   const handleSelectChange = (selected) => {
     if (!selected) return;
-    setSelectedV({ [selected.name]: selected.value });
+    console.log("selected", selected);
+    if (selectIsMultiple) {
+      const newValue = [];
+      let name;
+      selected.forEach((item) => {
+        newValue.push(item.value);
+        name = item.name;
+      });
+      setSelectedV({ [name]: [...newValue] });
+    } else {
+      setSelectedV({ [selected.name]: selected.value });
+    }
   };
+  console.log("selcet", selectedV);
 
   const handleTextArea = (e) => {
     const newValue = [...textareaV];
@@ -75,6 +87,7 @@ const Form = ({
                 onChange={handleSelectChange}
                 isClearable
                 isSearchable
+                isMulti={selectIsMultiple}
               />
             </div>
           ))}

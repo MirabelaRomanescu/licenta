@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Select from "react-select";
 import { RadioGroup, RadioButton } from "react-radio-buttons";
 import Button from "../../components/Button";
+import "./styleCalculatorMasa.css";
 
 const CalculatorMasa = ({ alimente }) => {
   const [alimentSelect, setAlimentSelect] = useState(null);
@@ -13,6 +14,7 @@ const CalculatorMasa = ({ alimente }) => {
   const valueSelect = alimente.map((item) =>
     Object.assign({}, { value: item.denumire, label: item.denumire })
   );
+
   const onSelect = (selected) => {
     if (!selected) return;
     const index = alimente.findIndex(
@@ -20,20 +22,24 @@ const CalculatorMasa = ({ alimente }) => {
     );
     setAlimentSelect(alimente[index]);
   };
+
   const onRadioChanged = (e) => {
     setModCalcul(e);
   };
+
   const onChangeInput = (e) => {
     const newVal = parseInt(e.target.value);
     setValAdaugata(newVal);
   };
+
   const Adauga = () => {
     const valCalc = {};
     const newValue = [];
     if (Verificare()) {
       valCalc["denumire"] = alimentSelect.denumire;
       modCalcul === "grame"
-        ? (valCalc["Kcal"] = (alimentSelect.kcal100g * valAdaugata) / 100).toFixed(2)
+        ? (valCalc["Kcal"] =
+            (alimentSelect.kcal100g * valAdaugata) / 100).toFixed(2)
         : (valCalc["Kcal"] = alimentSelect.kcalportie * valAdaugata).toFixed(2);
       newValue.push(valCalc);
       !!valCalculata
@@ -41,7 +47,6 @@ const CalculatorMasa = ({ alimente }) => {
         : setValCalculata(newValue);
 
       setValAdaugata("");
-      setAlimentSelect(null);
     }
 
     console.log("Adauga");
@@ -87,71 +92,90 @@ const CalculatorMasa = ({ alimente }) => {
   };
   return (
     <div>
-      {console.log(valCalculata)}
-      <Select
-        placeholder="Selecteaza denumirea alimentului"
-        name={"selectAliment"}
-        options={valueSelect}
-        onChange={onSelect}
-        isClearable
-        isSearchable
-      />
-      <RadioGroup onChange={onRadioChanged} horizontal>
-        <RadioButton
-          pointColor={"#3DAA8D"}
-          rootColor={"#666666"}
-          iconSize={20}
-          padding={10}
-          value="nr de portii"
-          children={"Introduc numar portii"}
+      <div className="formularAdaugareAliment">
+        {console.log(valCalculata)}
+        <div className="instructiuneFormular">
+          1. Tastează denumirea alimentului sau selecteaz-o din listă. Poți
+          arunca o privire în bara laterală să observi ce alimente există în
+          fiecare categorie.
+        </div>
+        <Select
+          className="selectAliment"
+          placeholder=""
+          name={"selectAliment"}
+          options={valueSelect}
+          onChange={onSelect}
+          isClearable
+          isSearchable
         />
-        <RadioButton
-          pointColor={"#3DAA8D"}
-          rootColor={"#666666"}
-          iconSize={20}
-          padding={10}
-          value="grame"
-          children={"Introduc numar grame"}
-        />
-      </RadioGroup>
-      <form className="addValue">
-        <input
-          name="valoareAdaugata"
-          value={valAdaugata}
-          onChange={onChangeInput}
-          type="number"
-          placeholder={!!modCalcul ? modCalcul : "Alege modul de calculare"}
-        />
-        <span>
+        <div className="instructiuneFormular">
+          2. Selectează modul în care dorești să introduci cantitatea de produs
+          - număr grame sau număr porții ( la selecție poți observa definiția
+          porției pentru fiecare produs)
+        </div>
+        <RadioGroup onChange={onRadioChanged} vertical>
+          <RadioButton
+            className="styleRadioButton"
+            pointColor={"#3DAA8D"}
+            rootColor={"#bfbfbf"}
+            iconSize={20}
+            padding={10}
+            value="număr porții"
+            children={"Introduc număr portii"}
+          />
+          <RadioButton
+            className="styleRadioButton"
+            pointColor={"#3DAA8D"}
+            rootColor={"#bfbfbf"}
+            iconSize={20}
+            padding={10}
+            value="grame"
+            children={"Introduc număr grame"}
+          />
+        </RadioGroup>
+        <div className="instructiuneFormular">
+          3. Adaugă cantitatea dorită și apasă butonul "Adaugă"
+        </div>
+        <form className="addValue">
+          <input
+            className="inputModCalcul"
+            name="valoareAdaugata"
+            value={valAdaugata}
+            onChange={onChangeInput}
+            type="number"
+            placeholder={!!modCalcul ? modCalcul : ""}
+          />
+          <span>
           {!!modCalcul && !!alimentSelect
             ? modCalcul === "grame"
-              ? "grame"
+              ? "numar grame"
               : alimentSelect.definitieportie
             : ""}
-        </span>
-      </form>
-      {!!alimentSelect ? alimentSelect.denumire : "Nu e selectat inca"}
-      {!!eroare ? <div className="eroareCalculator">{eroare}</div> : ""}
-      <Button action={Adauga} buttonName={"Adauga"} />
+          </span>
+        </form>
+
+        {!!eroare ? <div className="eroareCalculator">{eroare}</div> : ""}
+        <Button action={Adauga} buttonName={"Adauga"} />
+      </div>
+
       {!!valCalculata && (
-        <ul>
-          <li>
-            <p>
-              <span>Denumire</span> --- <span>Kcal</span>
-            </p>
+        <ul className="dimensiuneAfisare">
+          <li className="linieHeader">
+            <span className="afisareDenumire">Denumire</span>
+            <span className="AfisareKcal">Kcal</span>
           </li>
           {valCalculata.map((item, index) => {
             total += item.Kcal;
             return (
               <li key={index}>
-                <p>
-                  <span>{item.denumire}</span> --- <span>{item.Kcal}</span>
-                </p>
+                <span className="afisareDenumire">{item.denumire}</span>
+                <span className="AfisareKcal">{item.Kcal}</span>
               </li>
             );
           })}
-          <li>
-            <span>Total</span> --- <span>{total}</span>
+          <li className="linieTotal">
+            <span className="afisareDenumire">Total</span>
+            <span className="AfisareKcal">{total}</span>
           </li>
         </ul>
       )}

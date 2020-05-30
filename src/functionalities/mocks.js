@@ -1,3 +1,5 @@
+//////// Form Constructor ///////
+
 export const userLogin = [
     { value: "", name: "email", type: "email", placeholder: "Email" },
     { value: "", name: "password", type: "password", placeholder: "parola" }
@@ -25,16 +27,73 @@ export const editeazaConsultaii = [
     { value: "", name: "medic", type: "text", placeholder: "Medic" }
 ]
 
+export const adaugaMedicamentNou = [
+    { value: "", name: "denumire", type: "text", placeholder: "Denumire Medicament" },
+    { value: "", name: "FMfarma", type: "text", placeholder: "Forma farmaceutica" },
+    { value: "", name: "doza24", type: "text", placeholder: "Doza pe 24 ore" },
+    { value: "", name: "dozaUnit", type: "text", placeholder: "Dozaunitara" },
+
+]
+
+export const addAlimenteToDatabase = [
+    { value: "", name: "denumire", type: "text", placeholder: "Denumire" },
+    { value: "", name: "kcal100g", type: "number", placeholder: "Kcal/100g" },
+    { value: "", name: "kcalportie", type: "number", placeholder: "Kcal/portie" },
+    { value: "", name: "definitieportie", type: "text", placeholder: "Definitie portie" },
+]
+
+////// Select Constructor //////
+
+export const valueSelectaddAlimenteToDatabase = [{
+    value: [
+        { value: "fructeSeminte", label: "Fructe/Seminte", name: 'categorie' },
+        { value: "carnePesteMezeluri", label: "Carne/Peste/Mezeluri", name: 'categorie' },
+        { value: "bauturi", label: "Bauturi alcoolice/nonalcoolice", name: 'categorie' },
+        { value: "lactateBranzeturi", label: "Lactate/Branzeturi", name: 'categorie' },
+        { value: "ingredienteCondimente", label: "Ingrediente/Condimente", name: 'categorie' },
+        { value: "dulciuriPrajituri", label: "Dulciuri/Prajituri", name: 'categorie' },
+        { value: "painePaste", label: "Paine/Paste", name: 'categorie' },
+        { value: "legumeCereale", label: "legume/Cereale", name: 'categorie' }
+    ],
+    name: "categorie",
+    placeholder: "Categorie",
+    type: "select"
+}]
+
+export const valueSelectMomentulAdministrarii = [{
+    value: [
+        { value: "dimineata", label: "dimineata", name: 'moment' },
+        { value: "pranz", label: "pranz", name: 'moment' },
+        { value: "seara", label: "seara", name: 'moment' },
+    ],
+    name: "moment",
+    placeholder: "Momentul administrarii",
+    type: "select"
+}]
+
+//////////  Textarea Constructor /////////////
+
 export const textareaConsultatii = [
     {
         value: "",
         name: "recomandari",
         placeholder: `Te rugam introdu recomandarile medicului aici! Observatie! Daca dai enter ti se va memora schimbarile, pentru a da pe un rand nou te rugam sa folosesti shift+enter. Multumim!`,
-        cols: 50,
+        cols: 39,
         rows: 10,
         wrap: "true"
     }
 ]
+export const textareaAddMedicament = [
+    {
+        value: "",
+        name: "observatii",
+        placeholder: `Te rugam introdu observatiile aici! Atentie!!! Daca dai enter ti se va memora schimbarile, pentru a da pe un rand nou te rugam sa folosesti shift+enter. Multumim!`,
+        cols: 40,
+        rows: 10,
+        wrap: "true"
+    }
+]
+//////////  LeftBar  Constructor //////////
 
 export const createLeftBarProfile = [
     { path: "/profile/parametrii", text: "Parametrii tai" },
@@ -42,7 +101,7 @@ export const createLeftBarProfile = [
     { path: "/profile/imc", text: "IMC" },
     { path: "/profile/altiparametrii", text: "Alti parametrii" },
     { path: "/profile/consultatii", text: "Consultatii" },
-    { path: "/profile/tratamente", text: "Tratamente" }
+    { path: "/profile/tratament", text: "Tratamente" }
 ]
 
 export const createLeftBarAlimente = [
@@ -61,33 +120,9 @@ export const createLeftBarDiabet = [
     { path: "/despreDiabet/informatiiGenerale", text: "Informatii generale" },
     { path: "/despreDiabet/monitorizare", text: "Monitorizarea diabetului" },
     { path: "/despreDiabet/complicatii", text: "Complicatii" },
-    { path: "/despreDiabet/medicatie", text: "Medicatie" },
-    { path: "/despreDiabet/fitoterapie", text: "Fitoterapie" },
+    { path: "/despreDiabet/insulinoterapia", text: "Terapia cu insulină" },
+    { path: "/despreDiabet/ado", text: "Antidiabeticele orale" },
     { path: "/despreDiabet/despreAlimentatie", text: "Despre alimentatie" },
     { path: "/despreDiabet/terapiiAlternative", text: "Terapii alternative" },
     { path: "/despreDiabet/Altele", text: "Altele" },
-  ];
-  
-
-export const addAlimenteToDatabase = [
-    { value: "", name: "denumire", type: "text", placeholder: "Denumire" },
-    { value: "", name: "kcal100g", type: "number", placeholder: "Kcal/100g" },
-    { value: "", name: "kcalportie", type: "number", placeholder: "Kcal/portie" },
-    { value: "", name: "definitieportie", type: "text", placeholder: "Definitie portie" },
-]
-
-export const valueSelectaddAlimenteToDatabase = [{
-    value: [
-        { value: "fructeSeminte", label: "Fructe/Seminte", name: 'categorie' },
-        { value: "carnePesteMezeluri", label: "Carne/Peste/Mezeluri", name: 'categorie' },
-        { value: "bauturi", label: "Bauturi alcoolice/nonalcoolice", name: 'categorie' },
-        { value: "lactateBranzeturi", label: "Lactate/Branzeturi", name: 'categorie' },
-        { value: "ingredienteCondimente", label: "Ingrediente/Condimente", name: 'categorie' },
-        { value: "dulciuriPrajituri", label: "Dulciuri/Prajituri", name: 'categorie' },
-        { value: "painePaste", label: "Paine/Paste", name: 'categorie' },
-        { value: "legumeCereale", label: "legume/Cereale", name: 'categorie' }
-    ],
-    name: "categorie",
-    placeholder: "Categorie",
-    type: "select"
-}]
+];

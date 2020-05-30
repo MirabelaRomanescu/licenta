@@ -25,7 +25,6 @@ export const formatConsultatiiUser = (data) => {
     Object.entries(data).forEach(([key, val]) => {
         newData.push({ ...val, key: key });
     })
-    console.log("data", newData);
     return newData;
 }
 

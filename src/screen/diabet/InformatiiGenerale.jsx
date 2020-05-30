@@ -73,7 +73,8 @@ const InformatiiGenerale = () => {
         simptome pot apărea brusc și sunt prea severe pentru a fi trecute cu
         vederea:
       </p>
-      <ul className="lista">
+      <p>
+      <ul >
         <li>Setea crescută</li>
         <li>
           Urinări frecvente (pot să apară la copiii care au învățat deja să
@@ -88,6 +89,7 @@ const InformatiiGenerale = () => {
         <li>Miros neplăcut al respirației</li>
         <li>Piele iritată</li>
       </ul>
+      </p>
     </>
   );
 };

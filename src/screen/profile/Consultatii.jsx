@@ -7,23 +7,26 @@ import {
 import Loader from "react-loader-spinner";
 import Button from "../../components/Button";
 import Form from "../../components/Form";
-import { editeazaConsultaii, textareaConsultatii } from "../../functionalities/mocks";
+import {
+  editeazaConsultaii,
+  textareaConsultatii,
+} from "../../functionalities/mocks";
 import { formatConsultatiiUser } from "../../functionalities/helper";
 
 const Consultatii = () => {
   const [data, setData] = useState([]);
-  const [showContainTable, setShowContainTable] = useState(false);
+  const [showContentTable, setShowContentTable] = useState(false);
   const [showForm, setShowForm] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     const onMount = async () => {
       const res = await readProfileData("consultatii");
       if (!!res) {
-        setShowContainTable(true);
+        setShowContentTable(true);
         const raspuns = formatConsultatiiUser(res);
         setData(raspuns);
       } else {
-        setShowContainTable(false);
+        setShowContentTable(false);
       }
       setIsLoading(false);
     };
@@ -33,13 +36,14 @@ const Consultatii = () => {
     const newData = [...data];
     newData.push(valAdd);
     setData(newData);
-    setShowContainTable(true); 
+    setShowContentTable(true);
     addProfileData(valAdd, "consultatii");
   };
   if (isLoading) return <Loader />;
   return (
     <div>
-      {console.log(data)}<h3>Consultatii</h3>
+      {console.log(data)}
+      <h3>Consultatii</h3>
       <ul className="tableConsultatii">
         <li>
           <ul className="rowTableConsultatii">
@@ -48,14 +52,16 @@ const Consultatii = () => {
             <li className="recomandariConsultatie">Recomandari</li>
           </ul>
         </li>
-        {!showContainTable && <li>
-          <ul className="rowTableConsultatii">
-            <li className="dataConsultatie">nu exista</li>
-            <li className="medicConsultatie">nu exista</li>
-            <li className="recomandariConsultatie">nu exista</li>
-          </ul>
-        </li>}
-        {showContainTable &&
+        {!showContentTable && (
+          <li>
+            <ul className="rowTableConsultatii">
+              <li className="dataConsultatie">nu exista</li>
+              <li className="medicConsultatie">nu exista</li>
+              <li className="recomandariConsultatie">nu exista</li>
+            </ul>
+          </li>
+        )}
+        {showContentTable &&
           data.map((item, index) => (
             <li key={index}>
               <ul className="rowTableConsultatii">
@@ -71,15 +77,13 @@ const Consultatii = () => {
           action={() => setShowForm(!showForm)}
           buttonName={!!showForm ? "Inchide formularul" : "Adauga Consultatii"}
         />
-        {!!showForm ? (
+        {!!showForm && (
           <Form
             valueTextarea={textareaConsultatii}
             initialValue={editeazaConsultaii}
             buttonName={"Adauga Consultatii"}
             onSubmit={handleSubmit}
           />
-        ) : (
-          ""
         )}
       </div>
     </div>
