@@ -1,9 +1,12 @@
 import React from "react";
 import "./styleDiabet.css";
+import imagine from "../../assets/generalitati.png";
 
 const InformatiiGenerale = () => {
   return (
     <>
+              <img className="imagineHeader" src={imagine} alt=""/>
+      <div className="titleSeparationLine"></div>
       <div className="subtitlu">Introducere</div>
       <p>
         Diabetul zaharat(DZ) este cea mai frecventă tulburare metabolică care

@@ -1,9 +1,12 @@
 import React from "react";
 import "./styleDiabet.css";
+import imagine from "../../assets/despreAlimentatie.png";
 
 const DespreAlimentatie = () => {
   return (
     <>
+      <img className="imagineHeader" src={imagine} alt=""/>
+      <div className="titleSeparationLine"></div>
       <div className="subtitlu">Generalități</div>
       <p>
         Gestionarea corespunzătoare a glicemiei este cheia pentru a duce o viață

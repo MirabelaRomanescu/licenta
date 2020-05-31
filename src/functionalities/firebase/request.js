@@ -111,6 +111,14 @@ export const readFromDatabase = async (typedata) => {
   return response;
 }
 
+export const deleteFromDatabase = async (typeData, reference) => {
+  const id = localStorage.getItem("id");
+  const respond = await firebase_DB
+    .child(`/profile/${typeData}/${id}/${reference}`)
+    .remove();
+  return respond;
+};
+
 export const addProfileData = async (data, typedata) => {
   const id = localStorage.getItem("id");
   const response = await firebase_DB.child(`/profile/${typedata}/${id}`).push(data)

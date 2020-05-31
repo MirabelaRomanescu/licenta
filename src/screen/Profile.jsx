@@ -43,10 +43,6 @@ const Profile = () => {
         </div>
         <div className="lateralContent">
           <div className="text">
-            <h1>
-              Profilul meu <span className="submenuStyle">>> {section} </span>
-            </h1>
-            <div className="titleSeparationLine"></div>
             {_renderFetchSection()}
           </div>
           <Footer />

@@ -3,6 +3,7 @@ import Select from "react-select";
 import { RadioGroup, RadioButton } from "react-radio-buttons";
 import Button from "../../components/Button";
 import "./styleCalculatorMasa.css";
+import imagine from "../../assets/calculator.png";
 
 const CalculatorMasa = ({ alimente }) => {
   const [alimentSelect, setAlimentSelect] = useState(null);
@@ -91,14 +92,26 @@ const CalculatorMasa = ({ alimente }) => {
   };
   return (
     <div>
+            <img className="imagineHeader" src={imagine} alt=""/>
+      <div className="titleSeparationLine"></div>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti nisi
-        labore incidunt nulla dicta ipsam vero optio consequatur maiores dolorum
-        maxime asperiores, rerum quisquam aliquam quidem eligendi facilis
-        suscipit perspiciatis blanditiis deleniti ab tempore facere? Temporibus,
-        nesciunt quam dolorum corporis quibusdam harum aut sequi excepturi nisi
-        labore pariatur vitae, esse dolor, commodi blanditiis ab vero eveniet ex
-        exercitationem nihil culpa.
+        Indiferent de stilul culinar pe care il preferi, ar trebui sa ti minte
+        ca o alimentatie sanatoasa cuprinde in mare fructe si legume, carne
+        slabă și surse de proteine pe bază de plante, mai puțin zahăr adăugat si
+        mai puține alimente procesate. Atunci cand ai diabet, este foarte
+        important sa monitorizezi ceea ce mananci, si sa iti calculezi caloriile
+        si continutul de carbohidrati la fiecare masa. Acest lucru iti permite
+        sa te simti mai bine fizic si psihic, sa iti gestionezi mai bine boala
+        si sa previ aparitia complicatiilor. In acest scop, calculatorul de mai
+        jos iti vine in ajutor pentru a vedea cate kilocalorii ar avea cina pe
+        care planuiesti sa o prepari, sau cate kilocalorii ai ingerat la masa de
+        pranz.
+      </p>
+      <p>
+        Daca vrei sa vezi mai in detaliu nivelul caloric al diverselor produse
+        alimentare, arunca o privire in meniul din portiunea stanga a ecranului.
+        Vei observa la fiecare categorie continutul energetic in kilocalorii pe
+        grame si respective pe portie pentru cele mai des intalnite produse.
       </p>
       <div className="containerCalculator">
         <div className="formularAdaugareAliment">
@@ -186,22 +199,31 @@ const CalculatorMasa = ({ alimente }) => {
         )}
       </div>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti nisi
-        labore incidunt nulla dicta ipsam vero optio consequatur maiores dolorum
-        maxime asperiores, rerum quisquam aliquam quidem eligendi facilis
-        suscipit perspiciatis blanditiis deleniti ab tempore facere? Temporibus,
-        nesciunt quam dolorum corporis quibusdam harum aut sequi excepturi nisi
-        labore pariatur vitae, esse dolor, commodi blanditiis ab vero eveniet ex
-        exercitationem nihil culpa.
+        A știi ce să mănânci este o aptitudine care se dobandeste in timp.
+        Oriunde te uiti, vezi diverse pareri despre ceea ce este sau nu este bun
+        pentru tine. In realitate, tu singur iti poti planifica mesele astfel
+        incat sa iti gestionezi bine diabetul, dar si sa te bucuri de savoarea
+        alimentelor. De preferat ar fi sa consulti mai intai un dietetician, cu
+        care sa stabilesti impreuna care ar fi nivelul tau de calorii pe care sa
+        nu il depasesti zilnic. Insa determinarea caloriilor de la fiecare masa
+        o poti face singur, citind etichetele alimentelor sau folosind un
+        calculator al caloriilor, care foloseste valori medii din cele
+        disponibile in produsele de pe piata.
       </p>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti nisi
-        labore incidunt nulla dicta ipsam vero optio consequatur maiores dolorum
-        maxime asperiores, rerum quisquam aliquam quidem eligendi facilis
-        suscipit perspiciatis blanditiis deleniti ab tempore facere? Temporibus,
-        nesciunt quam dolorum corporis quibusdam harum aut sequi excepturi nisi
-        labore pariatur vitae, esse dolor, commodi blanditiis ab vero eveniet ex
-        exercitationem nihil culpa.
+        A mânca mai puține calorii nu înseamnă neapărat a mânca mai puține
+        alimente. Pentru a putea reduce caloriile fără să mananci mai puțin și
+        să te simti infometat, trebuie să inlocuiesti unele alimente cu un
+        conținut mai mare caloric cu alimente mai scăzute în calori. În general,
+        aceste alimente conțin multă apă și sunt bogate în fibre, ceea ce iti
+        aduce in plus si beneficii pentru tranzitul intestinal si aspectul
+        pielii.
+      </p>
+      <p>
+        Majoritatea oamenilor încearcă să-și reducă aportul de calorii,
+        concentrându-se pe alimente, dar un alt mod de a reduce caloriile poate
+        fi să schimbi ceea ce bei. S-ar putea să descoperi că consumi destul de
+        multe calorii în băuturile pe care le servesti în fiecare zi.{" "}
       </p>
     </div>
   );

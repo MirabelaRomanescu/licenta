@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./styleConsultatii.css";
+import "./styleProfile.css";
 import {
   readProfileData,
   addProfileData,
@@ -12,6 +12,7 @@ import {
 } from "../../functionalities/mocks";
 import { formatConsultatiiUser } from "../../functionalities/helper";
 import Myloader from "../../components/Myloader";
+import imagine from "../../assets/consultatii.png";
 
 const Consultatii = () => {
   const [data, setData] = useState([]);
@@ -42,11 +43,13 @@ const Consultatii = () => {
   if (isLoading) return <Myloader />;
   return (
     <div>
-      {console.log(data)}
-      <h3>Consultatii</h3>
+      {console.log(data)}          
+      <img className="imagineHeader" src={imagine} alt=""/>
+      <div className="titleSeparationLine"></div>
+      <div className="subtitlu">Consultatii</div>
       <ul className="tableConsultatii">
         <li>
-          <ul className="rowTableConsultatii">
+          <ul className="rowTableConsultatii headerConsultatii">
             <li className="dataConsultatie">Data</li>
             <li className="medicConsultatie">Medic</li>
             <li className="recomandariConsultatie">Recomandari</li>

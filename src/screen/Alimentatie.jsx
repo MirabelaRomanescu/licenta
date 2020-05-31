@@ -37,10 +37,6 @@ const Alimentatie = () => {
         </div>
         <div className="lateralContent">
         <div className="text">
-          <h1>
-            Alimentatie <span className="submenuStyle">>> {section} </span>
-          </h1>
-          <div className="titleSeparationLine"></div>
           { section === "calculator"?(
             <CalculatorMasa alimente={alimente}/>
           ):(

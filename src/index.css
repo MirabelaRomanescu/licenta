@@ -24,6 +24,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--gray1);
   color: var(--textgray);
+  color: var(--textgray);
+  font-weight: 400;
+  font-size: 17.5px;
+  line-height: 30px;
 }
 
 h1 {
@@ -31,12 +35,6 @@ h1 {
   color: var(--lovelyblue);
 }
 
-p {
-  color: var(--textgray);
-  font-weight: 400;
-  font-size: 17.5px;
-  line-height: 30px;
-}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

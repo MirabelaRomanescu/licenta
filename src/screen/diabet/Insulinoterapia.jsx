@@ -1,9 +1,12 @@
 import React from "react";
 import "./styleDiabet.css";
+import imagine from "../../assets/insulina.png";
 
 const Insulinoterapia = () => {
   return (
     <>
+              <img className="imagineHeader" src={imagine} alt=""/>
+      <div className="titleSeparationLine"></div>
       <div className="subtitlu">Despre insulină</div>
       <p>
         Insulina este un hormon hipoglicemiant secretat de către pancreas.

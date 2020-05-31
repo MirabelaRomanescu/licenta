@@ -33,12 +33,6 @@
   font-style: italic;
 }
 
-.titleSeparationLine {
-  padding: 1px;
-  background-color: var(--lovelyblue);
-  margin: 30px 0px;
-}
-
 .formSeparationLine {
   padding: 0.5px 220px;
   background-color: var(--lovelyblue);
@@ -60,7 +54,7 @@
 
 .lateralContent {
   width: 100%;
-  padding-top: 70px;
+  padding-top: 55px;
   text-align: justify;
 }
 
@@ -142,4 +136,52 @@
   cursor: pointer;
   color: var(--darkgray);
   background: var(--gray1);
+}
+
+.imagineHeader {
+  width: 100%;
+}
+
+.titleSeparationLine {
+  padding: 1px;
+  background-color: var(--lovelyblue);
+  margin: 10px 0 40px 0;
+}
+
+.centrare {
+  
+  margin: auto;
+  margin-bottom: 100px;
+  padding: 0px 200px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.centrare ul {
+  display: inline-block;
+}
+.centrare li {
+  display: inline-block;
+  width: 30%;
+  list-style-type: none;
+  padding: 30px;
+  margin: 10px;
+  background-color: var(--lovelyblue);
+  border-radius: 8px;
+  color: var(--gray1);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.hello {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.homeDetalii {
+  width: 100%;
+  margin: auto;
+  padding: 100px 200px;
+  text-align: center;
+  background: url("../assets/home3.png");
+  color: var(--gray1);
 }

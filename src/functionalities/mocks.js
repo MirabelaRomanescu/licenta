@@ -12,15 +12,40 @@ export const userRegister = [
 ]
 
 export const editeazaParametrii = [
-    { value: "", name: "glicemie", type: "number", placeholder: "Glicemie/in" },
-    { value: "", name: "varsta", type: "number", placeholder: "Varsta" },
-    { value: "", name: "greutate", type: "number", placeholder: "Greutate" },
-    { value: "", name: "inaltime", type: "number", placeholder: "Inaltime" },
-    { value: "", name: "hba1c", type: "number", placeholder: "HbA1C" },
-    { value: "", name: "colesterol", type: "number", placeholder: "Colesterol" },
-    { value: "", name: "trigliceride", type: "number", placeholder: "Trigliceride" },
-    { value: "", name: "tensiune arteriala", type: "number", placeholder: "Tensiune arteriala" },
-]
+    {
+      value: "",
+      name: "glicemie",
+      type: "number",
+      placeholder: "Glicemie (mg/dl)",
+    },
+    { value: "", name: "varsta", type: "number", placeholder: "Varsta (ani)" },
+    { value: "", name: "greutate", type: "number", placeholder: "Greutate (kg)" },
+    { value: "", name: "inaltime", type: "number", placeholder: "Inaltime (cm)" },
+    {
+      value: "",
+      name: "hba1c",
+      type: "number",
+      placeholder: "Hemoglobina glicata (%)",
+    },
+    {
+      value: "",
+      name: "colesterol",
+      type: "number",
+      placeholder: "Colesterol (mg/dl)",
+    },
+    {
+      value: "",
+      name: "trigliceride",
+      type: "number",
+      placeholder: "Trigliceride (mg/dl)",
+    },
+    {
+      value: "",
+      name: "tensiune arteriala",
+      type: "number",
+      placeholder: "Tensiune arteriala (mmHg)",
+    },
+  ];
 
 export const editeazaConsultaii = [
     { value: "", name: "data", type: "text", placeholder: "Data" },
@@ -128,5 +153,4 @@ export const createLeftBarDiabet = [
     { path: "/despreDiabet/ado", text: "Antidiabeticele orale" },
     { path: "/despreDiabet/despreAlimentatie", text: "Despre alimentatie" },
     { path: "/despreDiabet/terapiiAlternative", text: "Terapii alternative" },
-    { path: "/despreDiabet/Altele", text: "Altele" },
 ];

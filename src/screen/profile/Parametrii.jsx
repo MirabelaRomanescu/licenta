@@ -12,7 +12,8 @@ import {
 } from "../../functionalities/helper";
 import Myloader from "../../components/Myloader";
 import ListaParametrii from "../../components/ListaParametrii";
-import "./styleParametrii.css";
+import "./styleProfile.css";
+import imagine from "../../assets/parametriiMei.png";
 
 const Parametrii = () => {
   const [showForm, setshowForm] = useState(false);
@@ -48,6 +49,9 @@ const Parametrii = () => {
   if (isLoading) return <Myloader />;
   return (
     <>
+      <img className="imagineHeader" src={imagine} alt=""/>
+      <div className="titleSeparationLine"></div>
+      <div className="subtitlu">Parametrii tăi</div>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sapiente
         quaerat dicta, tempora consectetur libero reprehenderit fuga repellat

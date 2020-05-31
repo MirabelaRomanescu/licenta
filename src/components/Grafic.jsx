@@ -21,8 +21,8 @@ const Grafic = ({ data }) => {
           maintainAspectRatio: false,
           title: {
             display: true,
-            text: "Masuratori facute",
-            fontSize: 25,
+            text: "Ultimele măsuratori de glicemie",
+            fontSize: 22,
           },
           legend: {
             display: true,

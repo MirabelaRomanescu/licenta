@@ -1,9 +1,12 @@
 import React from "react";
 import "./styleDiabet.css";
+import imagine from "../../assets/terapiiAlternative.png";
 
 const TerapiiAlternative = () => {
   return (
-    <>
+    <>         
+     <img className="imagineHeader" src={imagine} alt=""/>
+    <div className="titleSeparationLine"></div>
       <div className="subtitlu">Importanța activității fizice în diabet</div>
       <p>
         Activitatea fizică este foarte importantă pentru persoanele cu diabet

@@ -1,9 +1,12 @@
 import React from "react";
 import "./styleDiabet.css";
+import imagine from "../../assets/complicatii.png";
 
 const Complicatii = () => {
   return (
     <>
+      <img className="imagineHeader" src={imagine} alt=""/>
+      <div className="titleSeparationLine"></div>
       <p>
         În timp, diabetul îți poate afecta orice parte a corpului. Vestea bună
         este că poți preveni sau întârzia multe din complicațiile date de

@@ -1,9 +1,12 @@
 import React from "react";
 import "./styleDiabet.css";
+import imagine from "../../assets/monitorizare.png";
 
 const Monitorizare = () => {
   return (
     <>
+              <img className="imagineHeader" src={imagine} alt=""/>
+      <div className="titleSeparationLine"></div>
       <p>
         Cea mai mare parte a alimentelor pe care le consumi sunt descompuse în
         zahăr (mai precis glucoză) și eliberată în fluxul sanguin pentru a fi

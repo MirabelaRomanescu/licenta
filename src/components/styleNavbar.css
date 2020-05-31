@@ -13,6 +13,7 @@
 }
 
 .primaryUL li {
+  height: 58px;
   float: right;
   display: block;
   margin: 0;
@@ -40,12 +41,12 @@
   float: left;
   width: 200px;
   text-align: center;
-  padding-top: 13px;
-  padding-right: 30px;
+  /* padding-top: 13px;
+  padding-right: 30px; */
 }
 
 .primaryUL .logo img {
-  height: 24px;
+  height: 25px;
   width: auto;
 }
 
@@ -57,7 +58,7 @@
   color: white;
   width: 100px;
   text-align: center;
-  padding: 18px 0px;
+  padding: 15px 0px;
 }
 
 .primaryUL .signOut .secondaryUL {

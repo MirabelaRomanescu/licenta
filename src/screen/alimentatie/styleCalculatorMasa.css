@@ -85,3 +85,13 @@
 .selectAliment {
   color: var(--darkgray);
 }
+
+.imagineHeader {
+  width: 100%;
+}
+
+.titleSeparationLine {
+  padding: 1px;
+  background-color: var(--lovelyblue);
+  margin: 10px 0 40px 0;
+}

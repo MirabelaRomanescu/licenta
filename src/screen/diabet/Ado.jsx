@@ -1,9 +1,12 @@
 import React from "react";
 import "./styleDiabet.css";
+import imagine from "../../assets/ado.png";
 
 const Ado = () => {
   return (
     <>
+      <img className="imagineHeader" src={imagine} alt=""/>
+      <div className="titleSeparationLine"></div>
       <div className="subtitlu">Generalități</div>
       <p>
         Medicaţia hipoglicemianata orală se utilizeaza pentru controlul
