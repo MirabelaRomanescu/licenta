@@ -4,7 +4,6 @@ import {
   readProfileData,
   addProfileData,
 } from "../../functionalities/firebase/request";
-import Loader from "react-loader-spinner";
 import Button from "../../components/Button";
 import Form from "../../components/Form";
 import {
@@ -12,6 +11,7 @@ import {
   textareaConsultatii,
 } from "../../functionalities/mocks";
 import { formatConsultatiiUser } from "../../functionalities/helper";
+import Myloader from "../../components/Myloader";
 
 const Consultatii = () => {
   const [data, setData] = useState([]);
@@ -39,7 +39,7 @@ const Consultatii = () => {
     setShowContentTable(true);
     addProfileData(valAdd, "consultatii");
   };
-  if (isLoading) return <Loader />;
+  if (isLoading) return <Myloader />;
   return (
     <div>
       {console.log(data)}

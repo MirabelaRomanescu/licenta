@@ -1,41 +1,58 @@
-.formularAdaugareAliment {
-  width: 60%;
-  padding: 10px 30px 30px 30px;
+.containerCalculator {
+  margin: 30px 0px;
+  padding: 20px 0px;
+  background-color: var(--gray2);
+}
 
+.formularAdaugareAliment {
+  width: 70%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 10px 50px 30px 50px;
   border-radius: 8px;
+  background-color: var(--gray1);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
 .dimensiuneAfisare {
-  width: 40%;
+  width: 60%;
   margin: auto;
+  margin-bottom: 50px;
   list-style-type: none;
-  margin: 50px 0 0 0;
   padding: 0;
   background-color: var(--gray2);
-  border-radius: 20px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
 .dimensiuneAfisare li {
-  border-bottom: 1.5px solid var(--gray1);
+  display: inline-block;
+  width: 100%;
+  background-color: var(--gray1);
+  border-bottom: 1.5px solid var(--gray2);
   padding: 10px 20px;
-  padding-bottom: 30px;
 }
 
 .afisareDenumire {
-  float: left;
+  display: inline-block;
+  text-align: center;
+  width: 50%;
 }
 
 .AfisareKcal {
-  float: right;
+  display: inline-block;
+  text-align: center;
+  width: 50%;
 }
 
 .dimensiuneAfisare .linieHeader {
   background-color: var(--gray3);
+  font-weight: bold;
 }
 
 .dimensiuneAfisare .linieTotal {
   background-color: var(--lovelyblue);
+  border-bottom: none;
   color: var(--gray1);
   font-weight: bold;
 }
@@ -47,24 +64,24 @@
 .inputModCalcul {
   width: 50%;
   margin-bottom: 40px;
-  border-radius: 4px;
+  border-radius: 5px;
   border: 1px solid var(--gray3);
   padding: 10px 0px 10px 10px;
   font-weight: 400;
-  font-size: 17.5px;
+  font-size: 16px;
 }
 
 .instructiuneFormular {
-    font-weight: 400;
-    font-size: 15px;
-    margin: 20px 0 5px 0px;
-    font-style: italic;
+  font-weight: 16px;
+  line-height: 25px;
+  margin: 30px 0 5px 0px;
+  font-style: italic;
 }
 
-.styleRadioButton{
-    border-radius: 8px;
+.styleRadioButton {
+  border-radius: 8px;
 }
 
 .selectAliment {
-    color: var(--darkgray);
+  color: var(--darkgray);
 }

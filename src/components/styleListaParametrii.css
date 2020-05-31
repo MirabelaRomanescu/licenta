@@ -1,0 +1,37 @@
+.listaParam {
+    list-style-type: none;
+    width: 100%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
+    padding-left: 0px;
+}
+
+.listaParam li {
+    display: inline-block;
+    width: 100%;
+    background-color: var(--gray1);
+    border-bottom: 1.5px solid var(--gray2);
+    padding: 10px 20px;
+}
+
+.listaParam li:hover {
+    background-color: var(--gray2);
+}
+
+.listaParam li span {
+    display: inline-block;
+    text-align: center;
+    width: 50%;
+}
+
+.listaParam> :first-child {
+    background-color: var(--lovelyblue);
+    color: var(--gray1);
+    font-weight: bold;
+}
+
+.listaParam> :first-child:hover {
+    background-color: var(--lovelyblue);
+}

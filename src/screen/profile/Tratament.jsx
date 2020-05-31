@@ -4,7 +4,6 @@ import {
   readProfileData,
   addProfileData,
 } from "../../functionalities/firebase/request";
-import Loader from "react-loader-spinner";
 import Button from "../../components/Button";
 import Form from "../../components/Form";
 import {
@@ -13,6 +12,7 @@ import {
   valueSelectMomentulAdministrarii,
 } from "../../functionalities/mocks";
 import { formatConsultatiiUser } from "../../functionalities/helper";
+import Myloader from "../../components/Myloader";
 
 const Tratament = () => {
   const [localdata, setLocalData] = useState(null);
@@ -28,6 +28,7 @@ const Tratament = () => {
         setIsLoading(false);
         setShowContentTable(true);
       } else {
+        setLocalData([]);
         setShowContentTable(false);
       }
       setIsLoading(false);
@@ -38,13 +39,12 @@ const Tratament = () => {
   const handleSubmit = (data) => {
     console.log(data);
     addProfileData(data, "tratament");
-    ////problem here nu randeaza rapid 
-    ///nu inteleg de ce
-    const newState = (!!localdata) ? [...localdata] : [];
+    const newState = !!localdata ? [...localdata] : [];
     newState.push(data);
     setLocalData(newState);
+    setShowContentTable(true);
   };
-  if (isLoading) return <Loader />;
+  if (isLoading) return <Myloader />;
   return (
     <>
       <h3>Tratament</h3>
@@ -62,12 +62,12 @@ const Tratament = () => {
         {!showContentTable && (
           <li>
             <ul className="rowTableTratament">
-              <li className="denMedTratament">nu exista valori</li>
-              <li className="fmFarmaTratament">nu exista valori</li>
-              <li className="dz24hTratament">nu exista valori</li>
-              <li className="dzUnitTratament">nu exista valori</li>
-              <li className="momentAdmTratament">nu exista valori</li>
-              <li className="observatiiTratament">nu exista valori</li>
+              <li className="denMedTratament">nu exista</li>
+              <li className="fmFarmaTratament">nu exista</li>
+              <li className="dz24hTratament">nu exista</li>
+              <li className="dzUnitTratament">nu exista</li>
+              <li className="momentAdmTratament">nu exista</li>
+              <li className="observatiiTratament">nu exista</li>
             </ul>
           </li>
         )}

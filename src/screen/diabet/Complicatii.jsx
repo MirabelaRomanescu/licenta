@@ -28,7 +28,7 @@ const Complicatii = () => {
         afecțiuni, pe lângă diabet, care îți ridică riscul pentru boli de inimă,
         precum:
       </p>
-      <ul className="lista">
+      <ul >
         <li>
           <b>Hipertensiunea arterială</b> crește forța sângelui prin arterele
           tale și poate deteriora pereții arterei.

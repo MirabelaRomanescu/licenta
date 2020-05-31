@@ -24,7 +24,6 @@ const Form = ({
 
   const handleSelectChange = (selected) => {
     if (!selected) return;
-    console.log("selected", selected);
     if (selectIsMultiple) {
       const newValue = [];
       let name;
@@ -37,7 +36,6 @@ const Form = ({
       setSelectedV({ [selected.name]: selected.value });
     }
   };
-  console.log("selcet", selectedV);
 
   const handleTextArea = (e) => {
     const newValue = [...textareaV];
@@ -73,7 +71,7 @@ const Form = ({
               type={item.type}
               onChange={onChange}
               name={item.name}
-              placeholder={item.placeholder || ""}
+              placeholder={!!displayLabel ? "" : item.placeholder}
             ></input>
           </div>
         ))}

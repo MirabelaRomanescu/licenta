@@ -48,9 +48,8 @@ const CalculatorMasa = ({ alimente }) => {
 
       setValAdaugata("");
     }
-
-    console.log("Adauga");
   };
+
   const Verificare = () => {
     if (!alimentSelect && !modCalcul && valAdaugata === "") {
       setError("Te rugam sa completezi datele cerute mai sus !");
@@ -92,93 +91,118 @@ const CalculatorMasa = ({ alimente }) => {
   };
   return (
     <div>
-      <div className="formularAdaugareAliment">
-        {console.log(valCalculata)}
-        <div className="instructiuneFormular">
-          1. Tastează denumirea alimentului sau selecteaz-o din listă. Poți
-          arunca o privire în bara laterală să observi ce alimente există în
-          fiecare categorie.
-        </div>
-        <Select
-          className="selectAliment"
-          placeholder=""
-          name={"selectAliment"}
-          options={valueSelect}
-          onChange={onSelect}
-          isClearable
-          isSearchable
-        />
-        <div className="instructiuneFormular">
-          2. Selectează modul în care dorești să introduci cantitatea de produs
-          - număr grame sau număr porții ( la selecție poți observa definiția
-          porției pentru fiecare produs)
-        </div>
-        <RadioGroup onChange={onRadioChanged} vertical>
-          <RadioButton
-            className="styleRadioButton"
-            pointColor={"#3DAA8D"}
-            rootColor={"#bfbfbf"}
-            iconSize={20}
-            padding={10}
-            value="număr porții"
-            children={"Introduc număr portii"}
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti nisi
+        labore incidunt nulla dicta ipsam vero optio consequatur maiores dolorum
+        maxime asperiores, rerum quisquam aliquam quidem eligendi facilis
+        suscipit perspiciatis blanditiis deleniti ab tempore facere? Temporibus,
+        nesciunt quam dolorum corporis quibusdam harum aut sequi excepturi nisi
+        labore pariatur vitae, esse dolor, commodi blanditiis ab vero eveniet ex
+        exercitationem nihil culpa.
+      </p>
+      <div className="containerCalculator">
+        <div className="formularAdaugareAliment">
+          <p className="instructiuneFormular">
+            1. Tastează denumirea alimentului sau selecteaz-o din listă.
+          </p>
+          <Select
+            className="selectAliment"
+            placeholder="Selecteza"
+            name={"selectAliment"}
+            options={valueSelect}
+            onChange={onSelect}
+            isClearable
+            isSearchable
           />
-          <RadioButton
-            className="styleRadioButton"
-            pointColor={"#3DAA8D"}
-            rootColor={"#bfbfbf"}
-            iconSize={20}
-            padding={10}
-            value="grame"
-            children={"Introduc număr grame"}
-          />
-        </RadioGroup>
-        <div className="instructiuneFormular">
-          3. Adaugă cantitatea dorită și apasă butonul "Adaugă"
-        </div>
-        <form className="addValue">
-          <input
-            className="inputModCalcul"
-            name="valoareAdaugata"
-            value={valAdaugata}
-            onChange={onChangeInput}
-            type="number"
-            placeholder={!!modCalcul ? modCalcul : ""}
-          />
-          <span>
-          {!!modCalcul && !!alimentSelect
-            ? modCalcul === "grame"
-              ? "numar grame"
-              : alimentSelect.definitieportie
-            : ""}
-          </span>
-        </form>
+          <p className="instructiuneFormular">
+            2. Selectează modul în care măsori cantitatea de produs
+            (grame/portii)
+          </p>
+          <RadioGroup onChange={onRadioChanged}>
+            <RadioButton
+              className="styleRadioButton"
+              pointColor={"#3DAA8D"}
+              rootColor={"#bfbfbf"}
+              iconSize={20}
+              padding={7}
+              value="număr porții"
+              children={"Introduc număr portii"}
+            />
+            <RadioButton
+              className="styleRadioButton"
+              pointColor={"#3DAA8D"}
+              rootColor={"#bfbfbf"}
+              iconSize={20}
+              padding={7}
+              value="grame"
+              children={"Introduc număr grame"}
+            />
+          </RadioGroup>
+          <p className="instructiuneFormular">
+            3. Adaugă cantitatea dorită și apasă butonul "Adaugă"
+          </p>
+          <form className="addValue">
+            <input
+              className="inputModCalcul"
+              name="valoareAdaugata"
+              value={valAdaugata}
+              onChange={onChangeInput}
+              type="number"
+              placeholder={!!modCalcul ? modCalcul : ""}
+            />
+            <span>
+              {!!modCalcul && !!alimentSelect
+                ? modCalcul === "grame"
+                  ? " grame"
+                  : " x " + alimentSelect.definitieportie
+                : ""}
+            </span>
+          </form>
 
-        {!!eroare ? <div className="eroareCalculator">{eroare}</div> : ""}
-        <Button action={Adauga} buttonName={"Adauga"} />
+          {!!eroare ? <div className="eroareCalculator">{eroare}</div> : ""}
+          <Button action={Adauga} buttonName={"Adauga"} />
+        </div>
+
+        {!!valCalculata && (
+          <ul className="dimensiuneAfisare">
+            <li className="linieTabel linieHeader">
+              <span className="afisareDenumire">Denumire aliment</span>
+              <span className="AfisareKcal">Kilocalorii continute</span>
+            </li>
+            {valCalculata.map((item, index) => {
+              total += item.Kcal;
+              return (
+                <li className="linieTabel" key={index}>
+                  <span className="afisareDenumire">{item.denumire}</span>
+                  <span className="AfisareKcal">{item.Kcal}</span>
+                </li>
+              );
+            })}
+            <li className="linieTabel linieTotal">
+              <span className="afisareDenumire">Total</span>
+              <span className="AfisareKcal">{total}</span>
+            </li>
+          </ul>
+        )}
       </div>
-
-      {!!valCalculata && (
-        <ul className="dimensiuneAfisare">
-          <li className="linieHeader">
-            <span className="afisareDenumire">Denumire</span>
-            <span className="AfisareKcal">Kcal</span>
-          </li>
-          {valCalculata.map((item, index) => {
-            total += item.Kcal;
-            return (
-              <li key={index}>
-                <span className="afisareDenumire">{item.denumire}</span>
-                <span className="AfisareKcal">{item.Kcal}</span>
-              </li>
-            );
-          })}
-          <li className="linieTotal">
-            <span className="afisareDenumire">Total</span>
-            <span className="AfisareKcal">{total}</span>
-          </li>
-        </ul>
-      )}
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti nisi
+        labore incidunt nulla dicta ipsam vero optio consequatur maiores dolorum
+        maxime asperiores, rerum quisquam aliquam quidem eligendi facilis
+        suscipit perspiciatis blanditiis deleniti ab tempore facere? Temporibus,
+        nesciunt quam dolorum corporis quibusdam harum aut sequi excepturi nisi
+        labore pariatur vitae, esse dolor, commodi blanditiis ab vero eveniet ex
+        exercitationem nihil culpa.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti nisi
+        labore incidunt nulla dicta ipsam vero optio consequatur maiores dolorum
+        maxime asperiores, rerum quisquam aliquam quidem eligendi facilis
+        suscipit perspiciatis blanditiis deleniti ab tempore facere? Temporibus,
+        nesciunt quam dolorum corporis quibusdam harum aut sequi excepturi nisi
+        labore pariatur vitae, esse dolor, commodi blanditiis ab vero eveniet ex
+        exercitationem nihil culpa.
+      </p>
     </div>
   );
 };

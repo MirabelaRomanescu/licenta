@@ -4,12 +4,12 @@ import Leftbar from "../components/LeftBarSelection";
 import { createLeftBarAlimente } from "../functionalities/mocks";
 import "./styleScreen.css";
 import { useParams } from "react-router-dom";
-import Loader from "react-loader-spinner";
 import { readFromDatabase } from "../functionalities/firebase/request";
 import { formatAlimentatieData } from "../functionalities/helper";
 import Alimente from "./alimentatie/ShowAlimente";
 import CalculatorMasa from "./alimentatie/CalculatorMasa";
 import Footer from "../components/Footer";
+import Myloader from "../components/Myloader";
 
 const Alimentatie = () => {
   const { section } = useParams();
@@ -25,7 +25,7 @@ const Alimentatie = () => {
     onMount();
   }, []);
 
-  if (isLoading) return <Loader />;
+  if (isLoading) return <Myloader />;
   return (
     <>
       <div className="fixNav">

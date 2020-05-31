@@ -8,9 +8,11 @@ import {
 } from "../../functionalities/firebase/request";
 import {
   formatPrametriiUser,
-  handleGlicemieData,
+  handleGlicemieDataForParametrii,
 } from "../../functionalities/helper";
-import Loader from "react-loader-spinner";
+import Myloader from "../../components/Myloader";
+import ListaParametrii from "../../components/ListaParametrii";
+import "./styleParametrii.css";
 
 const Parametrii = () => {
   const [showForm, setshowForm] = useState(false);
@@ -23,6 +25,7 @@ const Parametrii = () => {
       const res = await readProfileData("parametrii");
       if (!!res) {
         const raspuns = [...formatPrametriiUser(res)];
+        console.log(raspuns);
         setLocalState([...raspuns]);
         setLoading(false);
         console.log("Effect true");
@@ -36,71 +39,57 @@ const Parametrii = () => {
 
   const handleSubmit = async (e) => {
     await updateProfileData(e, "parametrii");
-    await handleGlicemieData();
+    await handleGlicemieDataForParametrii();
     setIsUpdateParam(Math.random());
     setLoading(true);
     setshowForm(false);
   };
 
-  if (isLoading) return <Loader />;
+  if (isLoading) return <Myloader />;
   return (
     <>
-      {console.log(localState)}
-      <ul>
-        {!!localState ? (
-          localState.map((item) => (
-            <li key={item.name}>
-              <span>{item.name}</span> - <span>{item.value}</span>
-            </li>
-          ))
-        ) : (
-          <>
-            <li>
-              <span>Glicemie</span> - <span>val</span>
-            </li>
-            <li>
-              <span>Varsa</span> - <span>val</span>
-            </li>
-            <li>
-              <span>Greutate</span> - <span>val</span>
-            </li>
-            <li>
-              <span>Inaltime</span> - <span>val</span>
-            </li>
-            <li>
-              <span>IMC</span> - <span>val</span>
-            </li>
-            <li>
-              <span>HBA1C</span> - <span>val</span>
-            </li>
-            <li>
-              <span>Colesterol</span> - <span>val</span>
-            </li>
-            <li>
-              <span>TA</span> - <span>val</span>
-            </li>
-            <li>
-              <span>TG</span> - <span>val</span>
-            </li>
-          </>
-        )}
-      </ul>
-      <Button
-        action={() => {
-          setshowForm(!showForm);
-        }}
-        buttonName={!showForm ? "Editeaza parametrii" : "Inchide Formularul"}
-      />
-      {showForm ? (
-        <Form
-          initialValue={editeazaParametrii}
-          buttonName={"Editeaza"}
-          onSubmit={handleSubmit}
-          displayLabel={true}
-        />
-      ) : (
-        ""
-      )}
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sapiente
+        quaerat dicta, tempora consectetur libero reprehenderit fuga repellat
+        nulla? Optio debitis, nam dolore quasi placeat quos aliquid earum porro
+        commodi ducimus voluptatibus, error vitae quis sequi. Ea ducimus
+        laudantium delectus quasi ex cum veniam, mollitia maiores a dolore quia
+        eos ut laboriosam eveniet itaque fugit saepe ratione odio porro autem
+        distinctio adipisci pariatur.
+      </p>
+      <div className="divParametrii">
+        <span className="divValori">
+          <ListaParametrii data={localState} />
+          <Button
+            action={() => {
+              setshowForm(!showForm);
+            }}
+            buttonName={
+              !showForm ? "Editeaza parametrii" : "Inchide Formularul"
+            }
+          />
+        </span>
+        <span className="divEditare">
+          {showForm ? (
+            <Form
+              initialValue={editeazaParametrii}
+              buttonName={"Salveaza"}
+              onSubmit={handleSubmit}
+            />
+          ) : (
+            ""
+          )}
+        </span>
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sapiente
+        quaerat dicta, tempora consectetur libero reprehenderit fuga repellat
+        nulla? Optio debitis, nam dolore quasi placeat quos aliquid earum porro
+        commodi ducimus voluptatibus, error vitae quis sequi. Ea ducimus
+        laudantium delectus quasi ex cum veniam, mollitia maiores a dolore quia
+        eos ut laboriosam eveniet itaque fugit saepe ratione odio porro autem
+        distinctio adipisci pariatur.
+      </p>
     </>
   );
 };

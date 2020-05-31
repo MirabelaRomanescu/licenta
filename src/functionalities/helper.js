@@ -1,4 +1,4 @@
-import { readProfileData, readFromDatabase, addToDatabase, updateToDatabase } from "./firebase/request";
+import { readProfileData, readFromDatabase, addToDatabase, updateToDatabase, addProfileData, updateProfileData } from "./firebase/request";
 
 export const formatAlimentatieData = (data) => {
     const newData = []
@@ -28,7 +28,15 @@ export const formatConsultatiiUser = (data) => {
     return newData;
 }
 
-export const handleGlicemieData = async () => {
+export const formatGlicemieUser = (data) => {
+    const newData = [];
+    Object.entries(data).forEach(([key, value]) => {
+        newData.push(parseInt(value));
+    })
+    return newData;
+}
+
+export const handleGlicemieDataForParametrii = async () => {
     const id = localStorage.getItem('id');
     let data = await readProfileData("glicemie")
     let key = [];
@@ -37,14 +45,12 @@ export const handleGlicemieData = async () => {
         key = Object.keys(data);
         value = Object.values(data);
     }
-    if (!!data && key.length >= 10) {
+    if (!!data && key.length >= 20) {
         const dataGli = await readFromDatabase(`profile/parametrii/${id}/glicemie`)
         const newData = {}
-        for (let i = 1; i < 10; i++) {
+        for (let i = 1; i < 20; i++) {
             newData[key[i]] = value[i];
         }
-        console.log(newData)
-
         await updateToDatabase(`profile/glicemie/${id}`, newData);
         await addToDatabase(`profile/glicemie/${id}`, dataGli);
 
@@ -52,5 +58,21 @@ export const handleGlicemieData = async () => {
         const dataGli = await readFromDatabase(`profile/parametrii/${id}/glicemie`)
         console.log("glicemie", dataGli);
         await addToDatabase(`profile/glicemie/${id}`, dataGli);
+    }
+}
+
+export const handleGlicemieData = async (data, newData) => {
+    const id = localStorage.getItem("id");
+    if (!!data && data.length >= 20) {
+        const handleData = {}
+        for (let i = 1; i < 20; i++) {
+            handleData[[i]] = data[i];
+        }
+        await updateToDatabase(`profile/glicemie/${id}`, handleData);
+        await addProfileData(newData, `glicemie`)
+        await updateToDatabase(`profile/parametrii/${id}/glicemie`, newData)
+    } else {
+        await addProfileData(newData, `glicemie`)
+        await updateToDatabase(`profile/parametrii/${id}/glicemie`, newData)
     }
 }

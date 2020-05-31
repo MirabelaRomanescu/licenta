@@ -1,0 +1,22 @@
+.divParametrii {
+    display: inline-block;
+    width: 100%;
+    max-height: 400px;
+    margin-bottom: 100px;
+}
+
+.divParametrii .divValori {
+    display: inline-block;
+    text-align: center;
+    width: 60%;
+    height: 100%;
+}
+
+.divParametrii .divEditare {
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    margin-left: 50px;
+    margin-top: 0px;
+    height: 100%;
+}

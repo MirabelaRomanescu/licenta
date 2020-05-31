@@ -12,7 +12,7 @@ export const userRegister = [
 ]
 
 export const editeazaParametrii = [
-    { value: "", name: "glicemie", type: "number", placeholder: "Glicemie" },
+    { value: "", name: "glicemie", type: "number", placeholder: "Glicemie/in" },
     { value: "", name: "varsta", type: "number", placeholder: "Varsta" },
     { value: "", name: "greutate", type: "number", placeholder: "Greutate" },
     { value: "", name: "inaltime", type: "number", placeholder: "Inaltime" },
@@ -40,6 +40,10 @@ export const addAlimenteToDatabase = [
     { value: "", name: "kcal100g", type: "number", placeholder: "Kcal/100g" },
     { value: "", name: "kcalportie", type: "number", placeholder: "Kcal/portie" },
     { value: "", name: "definitieportie", type: "text", placeholder: "Definitie portie" },
+]
+
+export const addGlicemieToDatabase = [
+    { value: "", name: "glicemie", type: "number", placeholder: "Glicemie" }
 ]
 
 ////// Select Constructor //////
