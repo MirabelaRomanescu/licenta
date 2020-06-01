@@ -42,7 +42,7 @@ export const editeazaParametrii = [
     {
       value: "",
       name: "tensiune arteriala",
-      type: "number",
+      type: "text",
       placeholder: "Tensiune arteriala (mmHg)",
     },
   ];

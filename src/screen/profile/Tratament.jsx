@@ -129,7 +129,7 @@ const Tratament = () => {
       <div className="actionConsultatii">
         <Button
           action={() => setShowForm(!showForm)}
-          buttonName={!!showForm ? "Inchide formularul" : "Adauga Consultatii"}
+          buttonName={!!showForm ? "Inchide formularul" : "Adauga Medicament"}
         />
         {!!showForm && (
           <Form
@@ -137,7 +137,7 @@ const Tratament = () => {
             initialValue={adaugaMedicamentNou}
             selectValue={valueSelectMomentulAdministrarii}
             selectIsMultiple={true}
-            buttonName={"Adauga Medicament"}
+            buttonName={"Salveaza"}
             onSubmit={handleSubmit}
           />
         )}
