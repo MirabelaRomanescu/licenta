@@ -164,7 +164,9 @@
 }
 
 .centrare ul {
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin-top: 100px;
 }
 .centrare li {
@@ -173,7 +175,6 @@
   min-height: 230px;
   list-style-type: none;
   padding: 30px;
-  margin: 10px;
   background-color: var(--lovelyblue);
   border-radius: 8px;
   color: var(--gray1);
