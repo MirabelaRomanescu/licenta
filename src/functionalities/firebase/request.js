@@ -10,7 +10,6 @@ export const handleLogin = async (data) => {
     .auth()
     .signInWithEmailAndPassword(email, password)
     .then((res) => {
-      console.log(res);
       localStorage.setItem("id", res.user.uid);
       localStorage.setItem("user", res.user.email);
       localStorage.setItem("error", 0);

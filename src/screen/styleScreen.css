@@ -149,7 +149,6 @@
 }
 
 .centrare {
-  
   margin: auto;
   margin-bottom: 100px;
   padding: 0px 200px;
@@ -157,12 +156,21 @@
   text-align: center;
 }
 
+.aliniereStanga {
+  margin: 50px 300px;
+  text-align: left;
+  border-left: 10px solid var(--lovelyblue);
+  padding-left: 10px;
+}
+
 .centrare ul {
   display: inline-block;
+  margin-top: 100px;
 }
 .centrare li {
   display: inline-block;
   width: 30%;
+  min-height: 230px;
   list-style-type: none;
   padding: 30px;
   margin: 10px;
@@ -184,4 +192,8 @@
   text-align: center;
   background: url("../assets/home3.png");
   color: var(--gray1);
+}
+
+.homeDetalii p {
+  margin-top: 50px;
 }

@@ -95,23 +95,23 @@ const CalculatorMasa = ({ alimente }) => {
             <img className="imagineHeader" src={imagine} alt=""/>
       <div className="titleSeparationLine"></div>
       <p>
-        Indiferent de stilul culinar pe care il preferi, ar trebui sa ti minte
-        ca o alimentatie sanatoasa cuprinde in mare fructe si legume, carne
-        slabă și surse de proteine pe bază de plante, mai puțin zahăr adăugat si
+        Indiferent de stilul culinar pe care îl preferi, ar trebui să ți minte
+        că o alimentație sănătoasă cuprinde în mare fructe și legume, carne
+        slabă și surse de proteine pe bază de plante, mai puțin zahăr adăugat și
         mai puține alimente procesate. Atunci cand ai diabet, este foarte
-        important sa monitorizezi ceea ce mananci, si sa iti calculezi caloriile
-        si continutul de carbohidrati la fiecare masa. Acest lucru iti permite
-        sa te simti mai bine fizic si psihic, sa iti gestionezi mai bine boala
-        si sa previ aparitia complicatiilor. In acest scop, calculatorul de mai
-        jos iti vine in ajutor pentru a vedea cate kilocalorii ar avea cina pe
-        care planuiesti sa o prepari, sau cate kilocalorii ai ingerat la masa de
-        pranz.
+        important să monitorizezi ceea ce manânci, și sa îți calculezi caloriile
+        și conținutul de carbohidrați la fiecare masă. Acest lucru îți permite
+        să te simți mai bine fizic și psihic, să îți gestionezi mai bine boala
+        și să previi apariția complicațiilor. În acest scop, calculatorul de mai
+        jos îți vine in ajutor pentru a vedea câte kilocalorii ar avea cina pe
+        care plănuiești sa o prepari, sau câte kilocalorii ai ingerat la masa de
+        prânz.
       </p>
       <p>
-        Daca vrei sa vezi mai in detaliu nivelul caloric al diverselor produse
-        alimentare, arunca o privire in meniul din portiunea stanga a ecranului.
-        Vei observa la fiecare categorie continutul energetic in kilocalorii pe
-        grame si respective pe portie pentru cele mai des intalnite produse.
+        Dacă vrei să vezi mai în detaliu nivelul caloric al diverselor produse
+        alimentare, aruncă o privire in meniul din porțiunea stanga a ecranului.
+        Vei observa la fiecare categorie conținutul energetic in kilocalorii pe
+        grame și respectiv pe porție pentru cele mai des întâlnite produse.
       </p>
       <div className="containerCalculator">
         <div className="formularAdaugareAliment">
@@ -129,7 +129,7 @@ const CalculatorMasa = ({ alimente }) => {
           />
           <p className="instructiuneFormular">
             2. Selectează modul în care măsori cantitatea de produs
-            (grame/portii)
+            (grame/porții)
           </p>
           <RadioGroup onChange={onRadioChanged}>
             <RadioButton
@@ -152,9 +152,9 @@ const CalculatorMasa = ({ alimente }) => {
             />
           </RadioGroup>
           <p className="instructiuneFormular">
-            3. Adaugă cantitatea dorită și apasă butonul "Adaugă"
+            3. Adaugă cantitatea dorită, după care apasă butonul "Adaugă"
           </p>
-          <form className="addValue">
+          <form className="addValue" onSubmit={(e)=>e.preventDefault()}>
             <input
               className="inputModCalcul"
               name="valoareAdaugata"
@@ -199,31 +199,31 @@ const CalculatorMasa = ({ alimente }) => {
         )}
       </div>
       <p>
-        A știi ce să mănânci este o aptitudine care se dobandeste in timp.
-        Oriunde te uiti, vezi diverse pareri despre ceea ce este sau nu este bun
-        pentru tine. In realitate, tu singur iti poti planifica mesele astfel
-        incat sa iti gestionezi bine diabetul, dar si sa te bucuri de savoarea
-        alimentelor. De preferat ar fi sa consulti mai intai un dietetician, cu
-        care sa stabilesti impreuna care ar fi nivelul tau de calorii pe care sa
-        nu il depasesti zilnic. Insa determinarea caloriilor de la fiecare masa
-        o poti face singur, citind etichetele alimentelor sau folosind un
-        calculator al caloriilor, care foloseste valori medii din cele
-        disponibile in produsele de pe piata.
+        A știi ce să mănânci este o aptitudine care se dobandeste în timp.
+        Oriunde te uiți, vezi diverse păreri despre ceea ce este sau nu este bun
+        pentru tine. În realitate, tu singur îți poti planifica mesele astfel
+        încât sa îți gestionezi bine diabetul, dar și să te bucuri de savoarea
+        alimentelor. De preferat ar fi să consulți mai întâi un dietetician, cu
+        care să stabilești împreună care ar fi nivelul tău de calorii pe care sa
+        nu îl depașești zilnic. Însă determinarea caloriilor de la fiecare masă
+        o poți face singur, citind etichetele alimentelor sau folosind un
+        calculator al caloriilor, care folosește valori medii din cele
+        disponibile în produsele de pe piață.
       </p>
       <p>
         A mânca mai puține calorii nu înseamnă neapărat a mânca mai puține
         alimente. Pentru a putea reduce caloriile fără să mananci mai puțin și
-        să te simti infometat, trebuie să inlocuiesti unele alimente cu un
+        să te simți infometat, trebuie să inlocuiesti unele alimente cu un
         conținut mai mare caloric cu alimente mai scăzute în calori. În general,
-        aceste alimente conțin multă apă și sunt bogate în fibre, ceea ce iti
-        aduce in plus si beneficii pentru tranzitul intestinal si aspectul
+        aceste alimente conțin multă apă și sunt bogate în fibre, ceea ce îți
+        aduce în plus și beneficii pentru tranzitul intestinal și aspectul
         pielii.
       </p>
       <p>
         Majoritatea oamenilor încearcă să-și reducă aportul de calorii,
         concentrându-se pe alimente, dar un alt mod de a reduce caloriile poate
         fi să schimbi ceea ce bei. S-ar putea să descoperi că consumi destul de
-        multe calorii în băuturile pe care le servesti în fiecare zi.{" "}
+        multe calorii în băuturile pe care le servesti în fiecare zi.
       </p>
     </div>
   );

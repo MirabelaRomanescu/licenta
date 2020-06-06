@@ -2,7 +2,6 @@ import React from "react";
 import "./styleListaParametrii.css";
 
 const ListaParametrii = ({ data }) => {
-  console.log("data", data);
   return (
     <>
       <ul className="listaParam">

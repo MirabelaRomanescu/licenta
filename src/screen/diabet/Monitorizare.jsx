@@ -31,7 +31,7 @@ const Monitorizare = () => {
       </p>
       <div className="subtitlu">Cum se măsoară nivelul glicemiei?</div>
       <p>Există două modalități de a măsura glicemia:</p>
-      <p>
+   
         <ul>
           <li>
             cu ajutoroul testelor de glicemie pe care le poți face singur.
@@ -44,7 +44,7 @@ const Monitorizare = () => {
             prescrie pentru diabet.
           </li>
         </ul>
-      </p>
+  
       <p>
         Gestionarea eficientă a diabetului te poate ajuta să previ alte probleme
         grave de sănătate, cum ar fi bolile de inimă, accidentul vascular
@@ -59,13 +59,13 @@ const Monitorizare = () => {
         diferite momente ale zilei. De obicei, valorile normale ale glicemiei
         arată astfel:
       </p>
-      <p>
+     
         <ul>
           <li>Înainte de masă: 80 - 130 mg / dl.</li>
           <li>La două ore după masă: sub 180 mg / dl.</li>
         </ul>
-      </p>
-      <p>
+   
+
         <p>Punctele cheie de verificare a glicemiei includ următoarele:</p>
         <ul>
           <li>Când te trezești</li>
@@ -73,7 +73,7 @@ const Monitorizare = () => {
           <li>La două ore după masă</li>
           <li>La culcare</li>
         </ul>
-      </p>
+   
       <p>
         Numărul de ori în care îți verifici glicemia va depinde de tipul de
         diabet pe care îl ai și dacă iei sau nu medicamente pentru diabet. Este
@@ -88,7 +88,7 @@ const Monitorizare = () => {
         bolnav și nu îți poți verifica singur glicemia.
       </p>
       <p>Sfaturi despre cum să folosești un glucometru:</p>
-      <p>
+    
         <ul>
           <li>Asigură-te că aparatul este curat și gata de utilizare.</li>
           <li>
@@ -122,7 +122,7 @@ const Monitorizare = () => {
             la umiditate, căldură extremă sau temperaturi reci.
           </li>
         </ul>
-      </p>
+     
       <div className="subtitlu">
         Ce face ca nivelul zahărului din sânge să fie ridicat sau scăzut?
       </div>
@@ -140,21 +140,20 @@ const Monitorizare = () => {
         de sănătate pe termen lung. Unele simptome ale glicemiei ridicate includ
         următoarele:
       </p>
-      <p>
+  
         <ul>
           <li>Te simti foarte obosit</li>
           <li>Iti este des sete</li>
           <li>Ai deseori o vedere încețoșată</li>
           <li>Simti nevoia de a urina mai des</li>
         </ul>
-      </p>
+    
       <p>
         Dacă sunteți bolnav și glicemia rămâne peste 240 mg / dl după 2
         verificări, adresați-vă medicului. Dacă aveți diabet de tip 1,
         asigurați-vă că vă verificați urina de cetone.
       </p>
       <p>
-        {" "}
         <b>Ce sunt cetonele, cetoza și cetoacidoza?</b>
       </p>
       <p>
@@ -205,14 +204,14 @@ const Monitorizare = () => {
         simptome, dar crezi că poți avea glicemie scăzută, verific-o. Dacă
         glicemia este mai mică de 70 mg / dl, poți proceda astfel:
       </p>
-      <p>
+    
         <ul>
           <li>Ia patru comprimate de glucoză</li>
           <li>Bea un pahar de suc de fructe</li>
           <li>Bea un pahar de băutură acidulată obișnuită, nu dietetică</li>
           <li>Mănâncă patru bucăți de bomboane tari</li>
         </ul>
-      </p>
+      
       <p>
         După unul dintre aceste tratamente, așteaptă 15 minute, apoi verifică
         din nou glicemia. Repetă până când glicemia este de 70 mg / dl sau mai
@@ -229,7 +228,7 @@ const Monitorizare = () => {
         optimă și practică exerciții fizice regulat. Alte sfaturi pentru
         controlul glicemiei ar fi:
       </p>
-      <p>
+ 
         <ul>
           <li>Păstrarea unui jurnal al citirii glicemiei de pe monitor.</li>
           <li>Mâncat la ore obișnuite și fară a sări peste mese.</li>
@@ -255,14 +254,14 @@ const Monitorizare = () => {
             și o jumătate din legume non-amidonice.
           </li>
         </ul>
-      </p>
+     
 
       <div className="subtitlu">Calendarul monitorizării diabetului</div>
-      <p>
+  
         <ul>
           <li>
             Zilnic
-            <p>
+         
               <ul>
                 <li>
                   măsurarea glicemiei cu glucometrul - este recomandat să vă
@@ -292,11 +291,11 @@ const Monitorizare = () => {
                   să rămână în intervalul țintă
                 </li>
               </ul>
-            </p>
+          
           </li>
           <li>
             O dată la 3 luni
-            <p>
+       
               <ul>
                 <li>
                   testul hemoglobinei glicate - dacă tratamentul tău s-a
@@ -311,11 +310,11 @@ const Monitorizare = () => {
                   schimbe tratamentul medicamentos.
                 </li>
               </ul>
-            </p>
+        
           </li>
           <li>
             O dată la șase luni
-            <p>
+          
               <ul>
                 <li>
                   examen stomatologic – este necesar să aveți grijă de sănătatea
@@ -334,11 +333,11 @@ const Monitorizare = () => {
                   schimbe tratamentul medicamentos.
                 </li>
               </ul>
-            </p>
+           
           </li>
           <li>
             în fiecare an
-            <p>
+    
               <ul>
                 <li>Vaccinul antigripal</li>
                 <li>Testele renale</li>
@@ -349,11 +348,11 @@ const Monitorizare = () => {
                 </li>
                 <li>Verificarea completă a piciorului</li>
               </ul>
-            </p>
+        
           </li>
           <li>
             O singură dată
-            <p>
+      
               <ul>
                 <li>
                   Vaccin împotriva pneumoniei – se face înainte de a împlini 65
@@ -367,11 +366,11 @@ const Monitorizare = () => {
                   acest vaccin sau nu.
                 </li>
               </ul>
-            </p>
+        
           </li>
           <li>
             La nevoie
-            <p>
+     
               <ul>
                 <li>
                   Verificarea sănătății mintale - spune medicului imediat dacă
@@ -383,10 +382,10 @@ const Monitorizare = () => {
                   sună imediat medicul pentru a putea fi evaluat.
                 </li>
               </ul>
-            </p>
+         
           </li>
         </ul>
-      </p>
+      
     </>
   );
 };

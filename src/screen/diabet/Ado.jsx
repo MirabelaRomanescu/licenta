@@ -31,12 +31,10 @@ const Ado = () => {
         în funcție de particularitățile fiecărui pacient, se recurge la
         următoarea schemă:
       </p>
-      <p>
         <ul>
           <li>
             Daca pacientul diabetic nu a raspuns la măsurile privitoare la
             modificarea stilului de viata si este:
-            <p>
               <ul>
                 <li>
                   supraponderal, cu functie renala normala → administrare
@@ -48,7 +46,6 @@ const Ado = () => {
                   la sulfamide, se poate administra o glitazona)
                 </li>
               </ul>
-            </p>
           </li>
           <li>
             Daca pacientul diabetic nu a raspuns la masurile privitoare la
@@ -60,7 +57,6 @@ const Ado = () => {
             </p>
           </li>
         </ul>
-      </p>
       <p>
         Datorită progresiei bolii ca urmare a diminuarii treptate a
         functionalitatii celulelor β pancreatice si cresterii rezistentei la
@@ -74,7 +70,6 @@ const Ado = () => {
         recomanda auto-controlul periodic al glicemiei.
       </p>
       <p>Antidiabeticele orale actionează în principal prin 3 moduri:</p>
-      <p>
         <ul>
           <li>
             stimularea secreției de insulină de către celulele pancreatice (
@@ -91,7 +86,6 @@ const Ado = () => {
             alfa-gloczidază)
           </li>
         </ul>
-      </p>
 
       <div className="titlu">
         Principale clase de antidiabetice orale sunt:{" "}
@@ -102,7 +96,6 @@ const Ado = () => {
         Principalele substanțe active (de bază) care fac parte din această clasă
         sunt:
       </p>
-      <p>
         <ul>
           <li>
             Merformin
@@ -123,9 +116,7 @@ const Ado = () => {
             </p>
           </li>
         </ul>
-      </p>
       <p>Informații generale referitoare la biguanide:</p>
-      <p>
         <ul>
           <li>
             masuri dietetice prealabile, reducerea greutatii corporale,
@@ -160,7 +151,6 @@ const Ado = () => {
             obişnuite
           </li>
         </ul>
-      </p>
       <p>
         Reacții adverse: tulburări digestive (greață, vomă, diaree, anorexie =
         pierderea apetitului), senzația de gust metalic, acidoză lactică (rar),
@@ -174,7 +164,6 @@ const Ado = () => {
         Principalele substanțe active (de bază) care fac parte din această clasă
         sunt:
       </p>
-      <p>
         <ul>
           <li>
             Tolbutamid
@@ -235,9 +224,7 @@ const Ado = () => {
             </p>
           </li>
         </ul>
-      </p>
       <p>Informații generale:</p>
-      <p>
         <ul>
           <li>se administreză cu jumătate de oră înainte de masă</li>
           <li>
@@ -246,14 +233,12 @@ const Ado = () => {
             efecte teratogene
           </li>
         </ul>
-      </p>
 
       <div className="subtitlu">INHIBITORI AI ALFAGLUCOZIDAZEI</div>
       <p>
         Principalele substanțe active (de bază) care fac parte din această clasă
         sunt:
       </p>
-      <p>
         <ul>
           <li>
             Acarboza
@@ -264,22 +249,18 @@ const Ado = () => {
             </p>
           </li>
         </ul>
-      </p>
       <p>Informații generale:</p>
-      <p>
         <ul>
           <li>scad absorbția carbohidraților din intestinul subțire</li>
           <li>se administrează în timpul meselor</li>
           <li>efecte adverse: flatulență, sindrom diareic</li>
         </ul>
-      </p>
 
       <div className="subtitlu">TIAZOLIDINDIONE (GLITAZONE)</div>
       <p>
         Principalele substanțe active (de bază) care fac parte din această clasă
         sunt:
       </p>
-      <p>
         <ul>
           <li>
             Pioglitazona
@@ -292,9 +273,7 @@ const Ado = () => {
             </p>
           </li>
         </ul>
-      </p>
       <p>Informații generale:</p>
-      <p>
         <ul>
           <li>se administrează cu sau fără alimente, la aceeași oră din zi</li>
           <li>
@@ -302,7 +281,6 @@ const Ado = () => {
             trigliceridemiei, cardiotoxicitate (rosiglitazona)
           </li>
         </ul>
-      </p>
 
       <div className="subtitlu">
         INHIBITORI AI DIPEPTIDIL PEPTIDAZEI 4 (DDP-4) (GLIPTINE)
@@ -311,7 +289,6 @@ const Ado = () => {
         Principalele substanțe active (de bază) care fac parte din această clasă
         sunt:
       </p>
-      <p>
         <ul>
           <li>
             Sitagliptina
@@ -324,9 +301,7 @@ const Ado = () => {
             <p>Administrare: oral, 100mg/zi in priza unica.</p>
           </li>
         </ul>
-      </p>
       <p>Informații generale:</p>
-      <p>
         <ul>
           <li>
             se administrează în monoterapie, indiferent de ingestia de alimente
@@ -336,14 +311,12 @@ const Ado = () => {
             respiratorii superioare
           </li>
         </ul>
-      </p>
 
       <div className="subtitlu">GLINIDE</div>
       <p>
         Principalele substanțe active (de bază) care fac parte din această clasă
         sunt:
       </p>
-      <p>
         <ul>
           <li>
             Repaglinid
@@ -355,9 +328,7 @@ const Ado = () => {
             </p>
           </li>
         </ul>
-      </p>
       <p>Informații generale:</p>
-      <p>
         <ul>
           <li>se administrează ci 15-30 minute înainte de masă</li>
           <li>
@@ -365,14 +336,11 @@ const Ado = () => {
             cutanate
           </li>
         </ul>
-      </p>
-
       <div className="subtitlu">INCRETINOMIMETICE</div>
       <p>
         Principalele substanțe active (de bază) care fac parte din această clasă
         sunt:
       </p>
-      <p>
         <ul>
           <li>
             Exenatid
@@ -382,9 +350,8 @@ const Ado = () => {
             </p>
           </li>
         </ul>
-      </p>
+
       <p>Informații generale:</p>
-      <p>
         <ul>
           <li>
             se administreză indiferent de orarul meselor, prin injectare
@@ -396,10 +363,8 @@ const Ado = () => {
             cutanate
           </li>
         </ul>
-      </p>
 
       <div className="subtitlu">Asocieri</div>
-      <p>
         <ul>
           <li>
             Metformin + sulfamide antidiabetice (Metformin + glibenclamid)
@@ -414,7 +379,6 @@ const Ado = () => {
             <p> Denumiri comerciale: TANDEMACT</p>
           </li>
         </ul>
-      </p>
     </>
   );
 };

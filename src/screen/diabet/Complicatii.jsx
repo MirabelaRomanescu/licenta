@@ -225,7 +225,6 @@ const Complicatii = () => {
         auzului se întâmplă adesea treptat, așa că este posibil să nu știți că
         aveți probleme de auz.
       </p>
-      <p>
         <p>
           Semnele pe care s-ar putea să le ai care indica pierderi de auz
           includ:
@@ -245,7 +244,6 @@ const Complicatii = () => {
             puternice pentru alte persoane
           </li>
         </ul>
-      </p>
       <div className="paragrafEvidentiat">
         <div className="titluEvidentiat">Cum poți preveni?</div>
         <p>

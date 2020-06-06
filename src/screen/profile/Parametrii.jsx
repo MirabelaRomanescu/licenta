@@ -26,13 +26,10 @@ const Parametrii = () => {
       const res = await readProfileData("parametrii");
       if (!!res) {
         const raspuns = [...formatPrametriiUser(res)];
-        console.log(raspuns);
         setLocalState([...raspuns]);
         setLoading(false);
-        console.log("Effect true");
       } else {
         setLoading(false);
-        console.log("Effect else");
       }
     };
     onMount();
@@ -53,13 +50,13 @@ const Parametrii = () => {
       <div className="titleSeparationLine"></div>
       <div className="subtitlu">Parametrii tăi</div>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sapiente
-        quaerat dicta, tempora consectetur libero reprehenderit fuga repellat
-        nulla? Optio debitis, nam dolore quasi placeat quos aliquid earum porro
-        commodi ducimus voluptatibus, error vitae quis sequi. Ea ducimus
-        laudantium delectus quasi ex cum veniam, mollitia maiores a dolore quia
-        eos ut laboriosam eveniet itaque fugit saepe ratione odio porro autem
-        distinctio adipisci pariatur.
+        Pe lângă a-ți monitoriza glicemia cât mai des cu ajutorul glucometrului
+        este esențial să mergi la medic și să îți dozezi și alți parametrii sanguini.
+        De ce? Pentru a le ține evidența și a observa atunci când ei sunt ușor crescuți.
+        Este important să acționezi la timp pentru a preveni complicațiile pe termen lung
+        asociate cu diabetul zaharat. Este mult mai ușor să previi decât să tratezi, așa 
+        că orice indiciu legat de o ușoară creștere a unui parametru te poate ajuta să
+        revi la nivelurile normale fără să ajungi la măsuri mai extreme.
       </p>
       <div className="divParametrii">
         <span className="divValori">
@@ -86,13 +83,15 @@ const Parametrii = () => {
         </span>
       </div>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sapiente
-        quaerat dicta, tempora consectetur libero reprehenderit fuga repellat
-        nulla? Optio debitis, nam dolore quasi placeat quos aliquid earum porro
-        commodi ducimus voluptatibus, error vitae quis sequi. Ea ducimus
-        laudantium delectus quasi ex cum veniam, mollitia maiores a dolore quia
-        eos ut laboriosam eveniet itaque fugit saepe ratione odio porro autem
-        distinctio adipisci pariatur.
+        Atunci când urmează să efectuezi anumite analize medicale ar trebui în
+        primul rând să fi conștient că corectitudinea rezultatelor este extrem
+        de importantă. Prin urmare, încearcă să nu urmezi altfel de regimuri alimentare în afara
+        celor recomandate de medic, pentru că îți dorești ca valorile parametrilor tăi să
+        reflecte mai bine ceea ce se întâmplă la tine în organism. Acest lucru
+        îl va ajuta pe medic să ia o decizie corectă în ceea ce privește tratamentul 
+        tău, și, de asemenea, te va ajuta și pe tine să te simți mai bine pe termen
+        lung și să previ surprizele neplăcute. Concludența rezultatelor este 
+        corelată direct cu îmbunătățirea tratamentului și a stării tale de sănătate! 
       </p>
     </>
   );

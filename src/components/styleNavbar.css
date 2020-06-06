@@ -33,10 +33,6 @@
   background: var(--darkergray);
 }
 
-.primaryUL li a:hover.active {
-  opacity: 80%;
-}
-
 .primaryUL .logo {
   float: left;
   width: 200px;

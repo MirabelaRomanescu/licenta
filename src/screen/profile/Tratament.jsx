@@ -43,7 +43,6 @@ const Tratament = () => {
 
   const handleSubmit = async (data) => {
     const T = new Date();
-    console.log(data);
     await addProfileData(data, "tratament");
     setIsLoading(true);
     setShowContentTable(true);
@@ -64,23 +63,23 @@ const Tratament = () => {
       <div className="titleSeparationLine"></div>
       <div className="subtitlu">Tratament</div>
       <p>
-        Este normal ca schema de tratament. si implicit medicamentele tale să se
+        Este normal ca schema de tratament și implicit medicamentele tale să se
         schimbe în timp. Cel mai important este ca tu să te simți mai bine o
-        data cu modificarea medicatiei. Există multe tipuri diferite de
+        data cu modificarea medicației. Există multe tipuri diferite de
         medicamente care pot funcționa în moduri diferite pentru a scădea
         glicemia. Uneori, un singur medicament va fi suficient, iar în alte
-        cazuri, medicul tău iti poate prescrie o combinație de medicamente,
-        pentru a reusi sa iti menti nivelul glicemiei in limitele normale.
+        cazuri, medicul tău iți poate prescrie o combinație de medicamente,
+        pentru a reuși să îți menți nivelul glicemiei în limitele normale.
       </p>
       <p>
-        Tabelul de mai jos te poate ajuta sa ti evidenta tratamentului pe care
-        il urmezi. Poti nota in sectiunea observatii disponibila la fiecare
-        medicament in parte toate indicatiile pe care ti le-a dat medicul sau
+        Tabelul de mai jos te poate ajuta să ți evidența tratamentului pe care
+        îl urmezi. Poți nota în secțiunea observații disponibilă la fiecare
+        medicament în parte toate indicațiile pe care ți le-a dat medicul sau
         farmacistul legate de modul corect de administrare a medicamentului.
-        Incearca sa iti administrezi medicatia in perioada zilei recomandata, si
-        in functie de orarul meselor. In sectiunea Despre diabet gasesti mai
-        multe explicatii legate de antidiabeticele orale si de insulina,
-        conditii speciale de administrare si precautii.
+        Încearcă să îți administrezi medicația în perioada zilei recomandată, și
+        în funcție de orarul meselor. În sectiunea <i>Despre diabet</i> gasești mai
+        multe explicații legate de antidiabeticele orale și de insulină,
+        condiții speciale de administrare și precauții.
       </p>
       <ul className="tableTratament">
         <li>
@@ -96,12 +95,12 @@ const Tratament = () => {
         {!showContentTable && (
           <li>
             <ul className="rowTableTratament">
-              <li className="denMedTratament">nu exista</li>
-              <li className="fmFarmaTratament">nu exista</li>
-              <li className="dz24hTratament">nu exista</li>
-              <li className="dzUnitTratament">nu exista</li>
-              <li className="momentAdmTratament">nu exista</li>
-              <li className="observatiiTratament">nu exista</li>
+              <li className="denMedTratament">nu există</li>
+              <li className="fmFarmaTratament">nu există</li>
+              <li className="dz24hTratament">nu există</li>
+              <li className="dzUnitTratament">nu există</li>
+              <li className="momentAdmTratament">nu există</li>
+              <li className="observatiiTratament">nu există</li>
             </ul>
           </li>
         )}
@@ -144,8 +143,8 @@ const Tratament = () => {
       </div>
       <p>
         Tratamentul de succes face toată diferența în ceea ce privește sănătatea
-        pe termen lung, iar stabilirea unui tratament corespunzator reprezinta
-        chiar cresterii calitatii vieții atât cu diabetul de tip 1, cât și cu
+        pe termen lung, iar stabilirea unui tratament corespunzator reprezintă
+        chiar creșterii calitații vieții atât cu diabetul de tip 1, cât și cu
         cel de tip 2. Tratamentul variază pentru fiecare individ, nu doar în
         funcție de tipul de diabet pe care îl ai, ci și de diferențele de
         tipologie specifice fiecărui individ.

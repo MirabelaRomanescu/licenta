@@ -18,7 +18,7 @@ const TerapiiAlternative = () => {
         din sânge și scade riscul de boli de inimă și leziuni ale nervilor.
       </p>
       <p>Alte avantaje suplimentare includ:</p>
-      <p>
+
         <ul>
           <li>Menținerea unei greutăți dorite</li>
           <li>Sentimentul de fericire</li>
@@ -30,7 +30,7 @@ const TerapiiAlternative = () => {
             („bun”)
           </li>
         </ul>
-      </p>
+  
       <p>
         A fi activ fizic poate fi distractiv. Când este posibil, ieși afară cu
         un prieten, conectează-te și bucură-te de vreme.
@@ -44,7 +44,7 @@ const TerapiiAlternative = () => {
         majore (picioare, șolduri, spate, abdomen, piept, umeri și brațe).
       </p>
       <p>Exemple de activități fizice cu intensitate moderată sunt:</p>
-      <p>
+ 
         <ul>
           <li>Mersul repede</li>
           <li>Făcutul de treburi casnice</li>
@@ -54,7 +54,7 @@ const TerapiiAlternative = () => {
           <li>Mersul cu bicicleta</li>
           <li>Practicarea de orice alte sporturi</li>
         </ul>
-      </p>
+    
       <p>
         Aceste activități îți lucrează mușchii mari, îți cresc ritmul cardiac și
         te fac să respiri mai greu, iar toate acestea sunt obiective importante

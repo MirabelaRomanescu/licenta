@@ -5,7 +5,7 @@ import imagine from "../../assets/insulina.png";
 const Insulinoterapia = () => {
   return (
     <>
-              <img className="imagineHeader" src={imagine} alt=""/>
+      <img className="imagineHeader" src={imagine} alt="" />
       <div className="titleSeparationLine"></div>
       <div className="subtitlu">Despre insulină</div>
       <p>
@@ -27,7 +27,6 @@ const Insulinoterapia = () => {
         Clasificarea tipurilor de insulină folosite în terapie
       </div>
       <p>În funcție de origine, insulina poate fi: </p>
-      <p>
       <ul>
         <li>
           insulina de origine animală – extrasă din pancreas de porc și/sau de
@@ -37,14 +36,13 @@ const Insulinoterapia = () => {
         <li>insulina umană – obținută prin inginerie genetică</li>
         <li>analogi de insulină</li>
       </ul>
-      </p>
       <p>
         Ritmul administrării și posologia depind de tipul de insulină, care
         dictează și latența și durata de acțiune. Latența reprezintă timpul
         dintre administrarea insulinei și momentul în care aceasta începe să își
         facă efectul. Astfel, în acest sens, există 3 tipuri de insulină:{" "}
       </p>
-      <p>
+
       <ul>
         <li>
           insuline cu acțiune de scurtă durată – au latența de 15-30 minute,
@@ -65,26 +63,25 @@ const Insulinoterapia = () => {
           LEVEMIR
         </li>
       </ul>
-      </p>
 
       <div className="subtitlu">Forme de prezentare :</div>
-      <p>
       <ul>
-        <li><b>Forme injectabile:</b> seringi clasice; pen-uri</li>
         <li>
-          <b>Forme inhalatorii:</b> primul produs care a avut autorizație de punere pe
-          piață a fost EXUBERA realizat de Pfizer, introdus in 2006 și retras în
-          2007 datorită proastei acceptanțe de către pacienți și de
+          <b>Forme injectabile:</b> seringi clasice; pen-uri
+        </li>
+        <li>
+          <b>Forme inhalatorii:</b> primul produs care a avut autorizație de
+          punere pe piață a fost EXUBERA realizat de Pfizer, introdus in 2006 și
+          retras în 2007 datorită proastei acceptanțe de către pacienți și de
           profesioniști. Raportul cost-eficienta nu a fost in favoarea acestei
           forme non-invazive de adminstrare a insulinei ;{" "}
         </li>
         <li>
-          <b>Pompa de insulina:</b> este un aparat medical miniaturizat utilizat pentru
-          administrarea subcutanată a insulinei în tratamentul diabetului.
-          Administrarea insulinei cu ajutorul unei pompe se mai numeşte şi
-          terapia prin infuzie continuă de insulină. Acest aparat purtat de
-          pacienţi este constituit din următoarele componente:
-          <p>
+          <b>Pompa de insulina:</b> este un aparat medical miniaturizat utilizat
+          pentru administrarea subcutanată a insulinei în tratamentul
+          diabetului. Administrarea insulinei cu ajutorul unei pompe se mai
+          numeşte şi terapia prin infuzie continuă de insulină. Acest aparat
+          purtat de pacienţi este constituit din următoarele componente:
           <ul>
             <li>pompa propriu-zisă;</li>
             <li>rezervorul pentru insulină (în interiorul aparatului);</li>
@@ -96,7 +93,6 @@ const Insulinoterapia = () => {
               și canulă.
             </li>
           </ul>
-          </p>
           <p>
             Pompa cu insulină este o alternativă la multiplele injecții cu
             insulină, realizate cu seringi sterile, zilnic, și face posibilă
@@ -114,7 +110,6 @@ const Insulinoterapia = () => {
             Pompa cu insulină livrează un singur tip de insulină, și anume cea
             rapidă, în două moduri:
           </p>
-          <p>
           <ul>
             <li>
               o doză „bolus” pentru a acoperi nevoia ceva mai mare de insulină
@@ -127,9 +122,7 @@ const Insulinoterapia = () => {
               mese și din timpul nopții.
             </li>
           </ul>
-          </p>
           <p>Avantajele pompei de insulina:</p>
-          <p>
           <ul>
             <li>ofera libertate mai mare in functie de orarul meselor ;</li>
             <li>
@@ -138,9 +131,7 @@ const Insulinoterapia = () => {
             </li>
             <li>reinnoirea canulei se face o data la cateva zile.</li>
           </ul>
-          </p>
           <p>Dezavantajele pompei de insulina:</p>
-          <p>
           <ul>
             <li>
               se stabileste mai greu doza bolus cu risc de dezvoltare a
@@ -155,11 +146,10 @@ const Insulinoterapia = () => {
               pentru evaluarea eficacitatii pompei.
             </li>
           </ul>
-          </p>
         </li>
         <li>
-          <b>Administrarea iv:</b> se utilizeaza doar în cazuri de urgențe : comă
-          hiperglicemică, cetoacidozică sau hiperosmolară ; sau în cazuri
+          <b>Administrarea iv:</b> se utilizeaza doar în cazuri de urgențe :
+          comă hiperglicemică, cetoacidozică sau hiperosmolară ; sau în cazuri
           operatorii;
         </li>
         <li>
@@ -169,10 +159,9 @@ const Insulinoterapia = () => {
           completeaza cu insulina de lunga durata.
         </li>
       </ul>
-      </p>
 
       <div className="subtitlu">Principiile insulinoterapiei</div>
-      <p>
+
       <ul>
         <li>
           Tratamentul cu insulină se face de obicei prin injecţii subcutanate cu
@@ -241,11 +230,10 @@ const Insulinoterapia = () => {
           </p>
         </li>
       </ul>
-      </p>
 
       <div className="subtitlu">Indicații și reacții adverse:</div>
       <p>Insulina este indicată ca și terapie în:</p>
-      <p>
+
       <ul>
         <li>
           diabet zaharat de tip 1 (motiv pentru care mai este numit și diabet
@@ -261,9 +249,8 @@ const Insulinoterapia = () => {
           alimentație / antidiabetice orale
         </li>
       </ul>
-      </p>
+
       <p>Reacții adverse:</p>
-      <p>
       <ul>
         <li>
           hipoglicemie (dar care nu este la fel de intensă precum în
@@ -280,7 +267,6 @@ const Insulinoterapia = () => {
         <li>insulino-rezistență</li>
         <li>reacții alergice (rare)</li>
       </ul>
-      </p>
 
       <div className="subtitlu"></div>
       <div className="subtitlu"></div>

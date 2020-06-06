@@ -46,7 +46,6 @@ const Glicemie = () => {
   };
 
   const handleSubmit = async (value) => {
-    console.log(value);
     await handleGlicemieData(data, value.glicemie);
     updateGrafic(value.glicemie);
   };
@@ -55,17 +54,17 @@ const Glicemie = () => {
 
   return (
     <>
-          <img className="imagineHeader" src={imagine} alt=""/>
+      <img className="imagineHeader" src={imagine} alt="" />
       <div className="titleSeparationLine"></div>
       <div className="subtitlu">Glicemia</div>
       <p>
-        In graficul de mai jos poti observa cum variaza ultimele valori ale
-        glicemiei tale. Poti adauga date noi in formularul alaturat si poti tine
-        astfel evidenta acestui parametru. Incearca sa observi ce anume face ca
-        glicemia ta sa creasca in afara intervalului dorit, in anumite zile sau
-        perioade. Daca ai identificat factorul perturbator, incearca sa reduci
-        cat de mult poti influenta acestuia, astfel incat sa iti controlezi
-        corespunzator concentratia de glucoza din sange.
+        In graficul de mai jos poți observa cum variază ultimele valori ale
+        glicemiei tale. Poți adăuga date noi in formularul alăturat și poți ține
+        astfel evidența acestui parametru. Încearcă să observi ce anume face ca
+        glicemia ta să crească în afara intervalului dorit, în anumite zile sau
+        perioade. Daca ai identificat factorul perturbator, încearcă să reduci
+        cat de mult poți influenta acestuia, astfel încat să iti controlezi
+        corespunzator concentrația de glucoză din sânge.
       </p>
       <div style={{ height: 500, width: "70%", margin: "auto" }}>
         <Grafic data={data} />
@@ -79,46 +78,60 @@ const Glicemie = () => {
       </div>
       <p>
         Glicemia este o măsurătoare esențială a sănătății tale, ca pacient
-        dibetic. Multe alimente se descompun în glucoza(un tip de zahar) inainte
-        sa ajunga in sânge, glucoza care este folosita pentru productia de
-        energie cu scopul a ne alimenta creierul, inima și mușchii. Glucoza fie
-        provine din alimentele pe care le consumăm, fie este făcută de catre
+        dibetic. Multe alimente se descompun în glucoză (un tip de zahăr)
+        înainte să ajungă în sânge, glucoza care este folosită pentru producția
+        de energie cu scopul a ne alimenta creierul, inima și mușchii. Glucoza
+        fie provine din alimentele pe care le consumăm, fie este făcută de catre
         ficat. De obicei se găsește în două locuri in organism: în fluxul
-        sanguin, atunci cand este transportata la toate organele și celulele
-        coprului, și în interiorul celulelor unde este transformata în energie.
-        Concentratia de glucoza din sange (cantitatea raportata la un anumit
-        volum de sange) poarta denumirea de glicemie.
+        sanguin, atunci cand este transportată la toate organele și celulele
+        corpului, și în interiorul celulelor unde este transformată în energie.
+        Concentratia de glucoză din sânge (cantitatea raportată la un anumit
+        volum de sânge) poartă denumirea de glicemie.
       </p>
       <p>
-        Atunci cand ai diabet, exista impedimente care fac ca glucoza din sange
-        sa nu mai poata sa treaca in interiorul celulelor. Cand acest lucru se
-        intampla, concentratia glocozei sanguine creste, asadar glicemia creste.
+        Atunci cand ai diabet, există impedimente care fac ca glucoza din sânge
+        să nu mai poată să treacă în interiorul celulelor. Când acest lucru se
+        întamplă, concentrația glocozei sanguine crește, așadar glicemia crește.
         Verificarea nivelului glicemiei te ajută să urmăresti ceea ce face
-        nivelul tau glicemic sa creasca. De exemplu, a fi bolnav, stresul sau
+        nivelul tau glicemic să crească. De exemplu, a fi bolnav, stresul sau
         consumul anumitor alimente poate determina creșterea valorilor
         glicemiei. Pe de alta parte, atunci când iei medicamentele prescrise,
-        devi mai activ sau mananci mai puțin decât de obicei, glicemia poate
+        devi mai activ sau mănânci mai puțin decât de obicei, glicemia poate
         scădea.
       </p>
-      <div className="subtitlu">Hemoglobina glicată</div>
+      <div className="subtitlu">Hemoglobina glicată (HbA1c)</div>
       <p className="valoare">
         {!!HBA1C
           ? "Valoare ta pentru hemoglobina glicată: " + HBA1C + "%"
           : "Valoare neadaugata inca ! Te rog sa o adaugi la parametrii tai ! "}
       </p>
+      <p>Interpretare rezultate:</p>
+      <ul>
+        <li>Valori normale: 4.8-5.6%</li>
+        <li>Risc crescut de a dezvolta diabet: 5.7-6.4%</li>
+        <li>Diabet zaharat: >=6.5%</li>
+        <li>Ținta terapeutică la pacienții diabetici: &lt;=7%</li>
+      </ul>
       <p>
-        Determinarea hemoglobinei glicate ofera o estimare retrospectiva a
-        statusului glicemic, independenta de ritmul circadian, dieta si alte
-        fluctuatii tranzitorii ale concentratiei glucozei in sange. Majoritatea
-        asociatiilor recomanda 6.5% sau 7% HbA1c ca tinta terapeutica pentru
-        pacientii diabetici. In general, rezultatele sunt interpretate astfel:
-        normal: 4.8-5.6%, risc crescut de a dezvolta diabet: 5.7-6.4%, diabet
-        zaharat: >=6.5%, tinta terapeutica la pacientii diabetici: sub 7
+        Determinarea hemoglobinei glicate este utilă întrucât arată cum s-a
+        comportat glicemia în ultimele luni. Rezultatele sunt independente de
+        ritmul circadian, dietă și alte fluctuații tranzitorii ale concentrației
+        glucozei din sânge. Majoritatea asociațiilor medicale recomandă 6.5% sau
+        7% HbA1c ca țintă terapeutica pentru pacientii diabetici.
       </p>
       <p>
-        Pentru a afla mai multe despre consecintele pe termen lung ale cresterii
-        glicemiei, dar si mai multe detalii legate de glicemie si cum
-        funtioneaza medicamentele antidiabetice, consulta sectiunea Despre
+        Importanta determinării hemoglobinei glicate la pacienții diabetici a
+        fost evidențiată de rezultatele a numeroase studii. Acestea au
+        demonstrat intr-un mod convingător efectul benefic al controlului
+        glicemic intensiv atat asupra parametrilor metabolici (glicemia si
+        HbA1c), cat si asupra complicațiilor pe termen lung (micro- si
+        macrovasculare) ale DZ de tip I sau II si au permis
+        stabilirea țintelor terapeutice vizibile mai sus.
+      </p>
+      <p>
+        Pentru a afla mai multe despre consecintele pe termen lung ale creșterii
+        glicemiei, dar și mai multe detalii legate de glicemie și cum
+        funționează medicamentele antidiabetice, consultă secțiunea Despre
         diabet din meniul de mai sus.
       </p>
     </>

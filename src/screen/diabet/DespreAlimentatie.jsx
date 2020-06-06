@@ -44,7 +44,6 @@ const DespreAlimentatie = () => {
       </p>
 
       <div className="subtitlu">Cum să-mi monitorizez carbohidrații?</div>
-      <p>
         <ul>
           <li>
             Monitorizarea carbohidraților mâncați și stabilirea unei limite
@@ -161,7 +160,6 @@ const DespreAlimentatie = () => {
               Pentru a aplica această metodă ai nevoie de o farfurie cu
               diametrul de 9 inci (23 cm).
             </p>
-            <p>
               <ul>
                 <li>
                   Umple jumătate cu legume non-amidonice, precum salată, fasole
@@ -177,10 +175,8 @@ const DespreAlimentatie = () => {
                   dublați legumele non-amidonice).
                 </li>
               </ul>
-            </p>
           </li>
         </ul>
-      </p>
 
       <div className="subtitlu">Despre calorii</div>
       <p>
@@ -250,7 +246,6 @@ const DespreAlimentatie = () => {
         Mai jos ai un ghid pe scurt despre modul în care nevoia ta de energie
         poate fi împărțită pe parcursul zilei:
       </p>
-      <p>
         <ul>
           <li>mic dejun: 20% (o cincime din consumul de energie)</li>
           <li>prânz: 30% (aproximativ o treime din aportul tău de energie)</li>
@@ -259,7 +254,6 @@ const DespreAlimentatie = () => {
           </li>
           <li>băuturi și gustări: 20% (o cincime din consumul de energie)</li>
         </ul>
-      </p>
       <p>
         După cum poți vedea, orice băutură sau gustare trebuie avută în vedere
         atunci când îți împarți zilnică totală. Dacă mănânci mai mult la micul
@@ -272,7 +266,6 @@ const DespreAlimentatie = () => {
         proteinele și carbohidrații. Alimentele care conțin în principal apă,
         precum legumele, au și mai puține. Iată cât reprezintă de fapt 100 de
         kilocalorii în câteva din cele mai întâlnite alimente:
-        <p>
           <ul>
             <li>
               Calorii în ulei, maioneză și unt
@@ -361,7 +354,6 @@ const DespreAlimentatie = () => {
             partea laterală sau pe spatele ambalajului.
           </p>
         </p>
-      </p>
     </>
   );
 };

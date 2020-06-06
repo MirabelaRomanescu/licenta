@@ -76,7 +76,6 @@ const InformatiiGenerale = () => {
         simptome pot apărea brusc și sunt prea severe pentru a fi trecute cu
         vederea:
       </p>
-      <p>
       <ul >
         <li>Setea crescută</li>
         <li>
@@ -92,7 +91,6 @@ const InformatiiGenerale = () => {
         <li>Miros neplăcut al respirației</li>
         <li>Piele iritată</li>
       </ul>
-      </p>
     </>
   );
 };

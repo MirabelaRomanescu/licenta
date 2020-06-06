@@ -56,7 +56,6 @@ export const handleGlicemieDataForParametrii = async () => {
 
     } else {
         const dataGli = await readFromDatabase(`profile/parametrii/${id}/glicemie`)
-        console.log("glicemie", dataGli);
         await addToDatabase(`profile/glicemie/${id}`, dataGli);
     }
 }

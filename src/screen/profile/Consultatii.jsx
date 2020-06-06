@@ -43,8 +43,7 @@ const Consultatii = () => {
   if (isLoading) return <Myloader />;
   return (
     <div>
-      {console.log(data)}          
-      <img className="imagineHeader" src={imagine} alt=""/>
+      <img className="imagineHeader" src={imagine} alt="" />
       <div className="titleSeparationLine"></div>
       <div className="subtitlu">Consultatii</div>
       <ul className="tableConsultatii">
@@ -89,6 +88,22 @@ const Consultatii = () => {
           />
         )}
       </div>
+      <p>
+        Scopul înregistrării consulațiilor trecute sau viitoare este de a
+        observa evoluția ta în timp, de la un consult la altul. Aruncă o privire
+        în calendarul din secțiunea "Monitorizarea diabetului" și află ce și
+        când ar trebui să faci pentru a te asigura că nu ratezi vreun consult
+        important. Dacă mergi la medic fără să depășești perioadele stabilite,
+        șansele tale de a dezvolta complicații fără ca medicul să observe sunt
+        minime.
+      </p>
+      <p>
+        Întreabă-ți medicul dacă nu ești sigur de ce ți se întâmplă anumite
+        lucruri. Cu cât întelegi mai bine anumite noțiuni, cu atât te vei simți
+        mai confortabil și liniștit, și vei putea să îți gestionezi mai bine
+        boala. Așa că ar trebui să profiți de timpul petrecut cu medicul, să
+        lași temerile acasă și să te bucuri de beneficiile fiecărui consult.
+      </p>
     </div>
   );
 };

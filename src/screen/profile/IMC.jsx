@@ -39,6 +39,15 @@ const IMC = () => {
       <div className="titleSeparationLine"></div>
       <div className="subtitlu">Indicele de masă corporală (IMC)</div>
       {!!IMC ? <p className="valoare">Valoare ta pentru IMC: {IMC}</p> : <p>{eroare}</p>}
+      <p>Interpretare rezultate:</p>
+      <ul>
+        <li>Subponderal: 18,49 sau mai putin</li>
+        <li>Greutate normala: intre 18,50 si 24,99</li>
+        <li>Supraponderal: intre 25,00 si 29,99</li>
+        <li>Obezitate (gradul I): intre 30,00 si 34,99</li>
+        <li>Obezitate (gradul II): intre 35,00 si 39,99	</li>
+        <li>Obezitate morbida: 40,00 sau mai mult</li>
+      </ul>
       <p>
         O cantitate mare de grăsime corporală poate duce la diverse probleme de
         sănătate. A fi subponderal pune, de asemenea, riscuri si problem de
@@ -47,37 +56,25 @@ const IMC = () => {
         ta si riscul potențial de boală.
       </p>
       <p>
-        IMC reprezinta greutatea unei persoane în kilograme împărțită la
-        pătratul înălțimii în metri. Un IMC prea ridicat sau scazut indica, de
-        ambele parti, probleme de sanatate.
+        IMC reprezintă greutatea unei persoane în kilograme împărțită la
+        pătratul înălțimii în metri. Un IMC prea ridicat sau scazut indică, de
+        ambele parți, probleme de sănătate.
       </p>
-      <ul>
-        <li>IMC-ul mai mic de 18,5 se încadrează în limita de greutate.</li>
-        <li>
-          IMC-ul cuprins între 18,5 și 24,9 se încadrează în intervalul normal
-          sau sănătos.
-        </li>
-        <li>
-          IMC-ul cuprins între 25.0 și 29.9 se încadrează în intervalul
-          supraponderal.
-        </li>
-        <li>IMC-ul de 30,0 sau mai mare se încadrează în domeniul obez.</li>
-      </ul>
       <p>
         Corelația dintre IMC și grăsimea corporală este destul de puternică, dar
         chiar dacă 2 persoane au același IMC, nivelul lor de greutate corporală
-        poate diferit. În general, chiar daca au același IMC, femeile tind să
+        poate diferit. În general, chiar dacă au același IMC, femeile tind să
         aibă mai multă grăsime corporală decât bărbații; în medie, persoanele în
         vârstă tind să aibă mai multă grăsime corporală decât adulții mai
         tineri; iar sportivii au mai puțină grăsime corporală decât cei care nu
         sunt sportivi.
       </p>
       <p>
-        Un alt mod de a estima riscul potențial de boală este de a măsura
-        circumferința taliei tale. Grăsimea abdominală excesivă poate fi gravă,
+        Un alt mod de a estima riscul potențial de boală este de a-ți măsura
+        circumferința taliei. Grăsimea abdominală excesivă poate fi gravă,
         deoarece presupune un risc mai mare de a dezvolta afecțiuni legate de
         obezitate, cum ar fi diabetul de tip 2, hipertensiunea arterială și
-        boala coronariană. Pentru barbati circumeferinta taliei ar trebui sa fie
+        boala coronariană. Pentru barbați circumeferința taliei ar trebui sa fie
         mai mica de 100 de centimetri. Iar pentru femeile care nu sunt gravide
         circumferinta taliei ar trebui sa nu fie mai mare de 90 de centimetri.
       </p>

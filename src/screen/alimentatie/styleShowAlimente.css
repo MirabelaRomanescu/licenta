@@ -4,8 +4,6 @@
   width: 90%;
   margin: auto;
   margin-top: 100px;
-  font-weight: 300;
-  font-size: 17.5px;
   display: block;
   padding: unset;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
@@ -21,7 +19,7 @@
 }
 
 .tableAlimentatie li .headerTableAlimentatie {
-  color: var(--gray2);
+  color: var(--gray1);
   background-color: var(--lovelyblue);
   font-weight: bold;
 }

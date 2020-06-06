@@ -125,32 +125,32 @@ export const textareaAddMedicament = [
 //////////  LeftBar  Constructor //////////
 
 export const createLeftBarProfile = [
-    { path: "/profile/parametrii", text: "Parametrii tai" },
-    { path: "/profile/glicemie", text: "Glicemie" },
+    { path: "/profile/parametrii", text: "Parametrii tăi" },
+    { path: "/profile/glicemie", text: "Glicemie & HbA1c" },
     { path: "/profile/imc", text: "IMC" },
-    { path: "/profile/altiparametrii", text: "Alti parametrii" },
-    { path: "/profile/consultatii", text: "Consultatii" },
-    { path: "/profile/tratament", text: "Tratamente" }
+    { path: "/profile/altiparametrii", text: "Alți parametrii" },
+    { path: "/profile/consultatii", text: "Consultații" },
+    { path: "/profile/tratament", text: "Tratament" }
 ]
 
 export const createLeftBarAlimente = [
-    { path: "/alimentatie/calculator", text: "Calculeaza-mi masa" },
-    { path: "/alimentatie/fructeSeminte", text: "Fructe si Seminte" },
-    { path: "/alimentatie/legumeCereale", text: "Legume si cereale" },
-    { path: "/alimentatie/painePaste", text: "Paine si paste" },
-    { path: "/alimentatie/carnePesteMezeluri", text: "Carne/Peste/Mezeluri" },
-    { path: "/alimentatie/lactateBranzeturi", text: "Lactate si Branzeturi" },
-    { path: "/alimentatie/dulciuriPrajituri", text: "Dulciuri si Prajituri" },
-    { path: "/alimentatie/ingredienteCondimente", text: "Ingrediente si Condimente" },
-    { path: "/alimentatie/bauturi", text: "Bauturi Alcoolice si Nonalcoolice" }
+    { path: "/alimentatie/calculator", text: "Calculează-mi masa" },
+    { path: "/alimentatie/fructeSeminte", text: "Fructe | Semințe" },
+    { path: "/alimentatie/legumeCereale", text: "Legume | Cereale" },
+    { path: "/alimentatie/painePaste", text: "Paine | Paste | Făinoase"},
+    { path: "/alimentatie/carnePesteMezeluri", text: "Carne | Pește | Mezeluri" },
+    { path: "/alimentatie/lactateBranzeturi", text: "Lactate | Brânzeturi" },
+    { path: "/alimentatie/dulciuriPrajituri", text: "Dulciuri | Prăjituri" },
+    { path: "/alimentatie/ingredienteCondimente", text: "Ingrediente | condimente" },
+    { path: "/alimentatie/bauturi", text: "Băuturi Alcoolice | Nonalcoolice" }
 ]
 
 export const createLeftBarDiabet = [
-    { path: "/despreDiabet/informatiiGenerale", text: "Informatii generale" },
+    { path: "/despreDiabet/informatiiGenerale", text: "Informații generale" },
     { path: "/despreDiabet/monitorizare", text: "Monitorizarea diabetului" },
-    { path: "/despreDiabet/complicatii", text: "Complicatii" },
+    { path: "/despreDiabet/complicatii", text: "Complicațiile DZ" },
     { path: "/despreDiabet/insulinoterapia", text: "Terapia cu insulină" },
     { path: "/despreDiabet/ado", text: "Antidiabeticele orale" },
-    { path: "/despreDiabet/despreAlimentatie", text: "Despre alimentatie" },
+    { path: "/despreDiabet/despreAlimentatie", text: "Despre alimentație" },
     { path: "/despreDiabet/terapiiAlternative", text: "Terapii alternative" },
 ];
